@@ -1,0 +1,18 @@
+{
+    "name": "viewi/viewi-ui",
+    "description": "UI components for Viewi",
+    "require": {
+        "viewi/viewi": "^0.3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Viewi\\ViewiUi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ivan Voitovych",
+            "email": "col606v@gmail.com"
+        }
+    ]
+}
