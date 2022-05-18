@@ -4,25 +4,26 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c89a32ebd0120119667cda4f5d52d010",
+    "content-hash": "76a1a24ae45208b3f640921d7222d290",
     "packages": [
         {
             "name": "viewi/viewi",
-            "version": "v0.3.3",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/viewi/viewi.git",
-                "reference": "9044490322f02ee2bb2232f92c0ff268232fa778"
+                "reference": "f78428f9fcda5b5a18893d1e2aaa156f03539773"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/viewi/viewi/zipball/9044490322f02ee2bb2232f92c0ff268232fa778",
-                "reference": "9044490322f02ee2bb2232f92c0ff268232fa778",
+                "url": "https://api.github.com/repos/viewi/viewi/zipball/f78428f9fcda5b5a18893d1e2aaa156f03539773",
+                "reference": "f78428f9fcda5b5a18893d1e2aaa156f03539773",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.4 || ^8.0"
             },
+            "default-branch": true,
             "bin": [
                 "bin/viewi"
             ],
@@ -45,15 +46,17 @@
             ],
             "support": {
                 "issues": "https://github.com/viewi/viewi/issues",
-                "source": "https://github.com/viewi/viewi/tree/v0.3.3"
+                "source": "https://github.com/viewi/viewi/tree/master"
             },
-            "time": "2022-02-08T08:18:57+00:00"
+            "time": "2022-05-14T08:38:33+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "viewi/viewi": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
