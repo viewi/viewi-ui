@@ -1,0 +1,53 @@
+/** Icons **/
+
+.viewi-icon {
+    font-size: 24px;
+    align-items: center;
+    display: inline-flex;
+    font-feature-settings: "liga";
+    font-size: 24px;
+    justify-content: center;
+    letter-spacing: normal;
+    line-height: 1;
+    position: relative;
+    text-indent: 0;
+    transition: .3s cubic-bezier(.25, .8, .5, 1), visibility 0s;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.viewi-icon.pos-right,
+.viewi-icon.pos-left {
+    font-size: 18px;
+    height: 18px;
+    width: 18px;
+}
+
+.viewi-icon.pos-left {
+    margin-left: -4px;
+    margin-right: 8px;
+}
+
+.viewi-icon.pos-right {
+    margin-left: 8px;
+    margin-right: -4px;
+}
+
+.viewi-icon.size-xsmall {
+    font-size: 12px;
+}
+
+.viewi-icon.size-small {
+    font-size: 16px;
+}
+
+.viewi-icon.size-large {
+    font-size: 36px;
+}
+
+.viewi-icon.size-xlarge {
+    font-size: 40px;
+}
