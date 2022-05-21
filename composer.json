@@ -4,6 +4,13 @@
     "require": {
         "viewi/viewi": "dev-master"
     },
+    "keywords": [
+        "viewi",
+        "UI",
+        "reactive",
+        "template"
+    ],
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "ViewiUI\\": "src/ViewiUI/"
