@@ -1,6 +1,34 @@
 # viewi-ui
 Viewi UI - Library with Material Components for Viewi. Inspired by Vuetify and Bootstrap.
 
+Usage
+--------
+
+Include `ViewiUI` package:
+
+```php
+use Viewi\App;
+
+$config = require 'config.php';
+$publicConfig = require 'publicConfig.php';
+include __DIR__ . '/routes.php';
+App::init($config, $publicConfig);
+App::use(ViewiUI\Package::class); // here
+```
+
+Add `<ViewiUI />` somewhere in your layout:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        $title | Viewi UI
+    </title>
+...
+    <ViewiUI />
+...
+```
 
 Support
 --------
