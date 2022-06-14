@@ -1,0 +1,102 @@
+<?php
+
+$config = include 'cssConfig.php';
+?>
+/** Column **/
+
+.col,
+.col-auto<?php
+foreach (range(1, 12) as $size) :
+?>
+,
+.col-<?= $size ?>
+<?php
+endforeach;
+foreach ($config['breakpoints'] as $breakPointName => $minWidth) :
+foreach (range(1, 12) as $size) :
+?>
+,
+.col-<?= $breakPointName ?>-<?= $size ?>
+<?php
+endforeach;
+?>
+,
+.col-<?= $breakPointName ?>-auto<?php
+endforeach;
+?>
+ {
+    width: 100%;
+    padding: 12px
+}
+
+.col {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%
+}
+
+.col-auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%
+}
+<?php
+foreach (range(1, 12) as $size) :
+?>
+
+.col-<?= $size ?> {
+    flex: 0 0 <?= $size * 100 / 12 ?>%;
+    max-width: <?= $size * 100 / 12 ?>%
+}
+<?php
+endforeach;
+
+// MEDIA
+
+foreach ($config['breakpoints'] as $breakPointName => $minWidth) :
+?>
+
+@media(min-width:<?= $minWidth ?>) {
+    .col-<?= $breakPointName ?> {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%
+    }
+
+    .col-<?= $breakPointName ?>-auto {
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%
+    }
+    <?php
+    foreach (range(1, 12) as $size) :
+
+    ?>
+    
+    .col-<?= $breakPointName ?>-<?= $size ?> {
+        flex: 0 0 <?= $size * 100 / 12 ?>%;
+        max-width: <?= $size * 100 / 12 ?>%
+    }
+    <?php
+    endforeach;
+    foreach (range(0, 11) as $size) :
+        
+    ?>
+    
+    .is-ltr .offset-<?= $breakPointName ?>-<?= $size ?> {
+        margin-left: <?= $size * 100 / 12 ?><?= $size === 0 ? '' : '%' ?>
+
+    }
+
+    .is-rtl .offset-<?= $breakPointName ?>-<?= $size ?> {
+        margin-right: <?= $size * 100 / 12 ?><?= $size === 0 ? '' : '%' ?>
+
+    }
+    <?php
+    endforeach;
+?>
+
+}
+
+<?php
+endforeach;
