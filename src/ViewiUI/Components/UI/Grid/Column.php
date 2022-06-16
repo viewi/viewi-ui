@@ -7,21 +7,22 @@ use Viewi\BaseComponent;
 class Column extends BaseComponent
 {
 
-    public ?int $cols = null;
-    public ?int $xs = null;
-    public ?int $sm = null;
-    public ?int $md = null;
-    public ?int $lg = null;
-    public ?int $xl = null;
+    public ?string $cols = null;
+    public ?string $xs = null;
+    public ?string $sm = null;
+    public ?string $md = null;
+    public ?string $lg = null;
+    public ?string $xl = null;
     public ?string $alignSelf = null;
+    public ?string $order = null;
+    public ?string $class = null;
 
     public function getClasses()
     {
-        $breakpointClasses = '';        
+        $breakpointClasses = '';
         foreach ($this->_props as $prop => $value) {
             if (
                 strpos($prop, 'offset-') === 0
-                || strpos($prop, 'order-') === 0
             ) {
                 $breakpointClasses .= " $prop-$value";
             }
@@ -35,6 +36,8 @@ class Column extends BaseComponent
             . ($this->md !== null ? ' col-md-' . $this->md : '')
             . ($this->lg !== null ? ' col-lg-' . $this->lg : '')
             . ($this->xl !== null ? ' col-xl-' . $this->xl : '')
-            . $breakpointClasses;
+            . ($this->order ? ' order-' . $this->order : '')
+            . $breakpointClasses
+            . ($this->class ? ' ' . $this->class : '');
     }
 }
