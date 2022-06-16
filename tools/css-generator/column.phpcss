@@ -51,6 +51,27 @@ foreach (range(1, 12) as $size) :
 <?php
 endforeach;
 
+// ORDER
+?>
+
+.order-first {
+    order: -1 !important
+}
+<?php
+foreach (range(0, 12) as $size) :
+?>
+
+.order-<?= $size ?> {
+    order: <?= $size ?> !important
+}
+<?php
+endforeach;
+?>
+
+.order-last {
+    order: 13 !important
+}
+<?php
 // MEDIA
 
 foreach ($config['breakpoints'] as $breakPointName => $minWidth) :

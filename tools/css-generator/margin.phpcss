@@ -1,0 +1,66 @@
+<?php
+
+$config = include 'cssConfig.php';
+
+$margins = [
+    'ma' => ['margin'],
+    'mx' => ['margin-right', 'margin-left'],
+    'my' => ['margin-top', 'margin-bottom'],
+    'mt' => ['margin-top'],
+    'mr' => ['margin-right'],
+    'mb' => ['margin-bottom'],
+    'ml' => ['margin-left']
+];
+
+?>
+/** Margin **/
+
+<?php
+
+function generateMarginCss($margins, $config, $prefix ='', $indentation = '')
+{
+
+foreach ($margins as $marginName => $marginProps) :
+foreach (range(0, 16) as $size) :
+?>
+<?= $indentation ?>.<?= $marginName . $prefix ?>-<?= $size ?> {
+<?php
+foreach ($marginProps as $marginProperty) :
+?>
+    <?= $indentation ?><?= $marginProperty ?>: <?= $size * 4 ?>px !important;
+<?php
+endforeach;
+?>
+<?= $indentation ?>}
+
+<?php
+endforeach;
+?>
+<?= $indentation ?>.<?= $marginName . $prefix ?>-auto {
+<?php
+foreach ($marginProps as $marginProperty) :
+?>
+    <?= $indentation ?><?= $marginProperty ?>: auto !important;
+<?php
+endforeach;
+?>
+<?= $indentation ?>}
+
+<?php
+endforeach;
+}
+
+generateMarginCss($margins, $config);
+// MEDIA
+
+foreach ($config['breakpoints'] as $breakPointName => $minWidth) :
+?>
+
+@media(min-width:<?= $minWidth ?>) {
+<?php
+generateMarginCss($margins, $config, '-' . $breakPointName, '    ');
+?>
+}
+
+<?php
+endforeach;
