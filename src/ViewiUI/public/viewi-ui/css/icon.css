@@ -51,3 +51,19 @@
 .viewi-icon.size-xlarge {
     font-size: 40px;
 }
+
+.size-xsmall .viewi-icon{
+    font-size: 18px;
+}
+
+.size-small .viewi-icon{
+    font-size: 24px;
+}
+
+.size-large .viewi-icon{
+    font-size: 28px;
+}
+
+.size-xlarge .viewi-icon{
+    font-size: 32px;
+}
