@@ -39,8 +39,8 @@ class Button extends BaseComponent
         $classes .= $this->text ? ' text' : '';
         $classes .= $this->tile ? ' tile' : '';
         $classes .= $this->rounded ? ' rounded' : '';
-        $classes .= $this->pill ? ' pill' : '';
-        $classes .= $this->size ? ' size-' . $this->size : '';
+        $classes .= $this->pill ? ' pill round' : '';
+        $classes .= $this->size ? ' size-' . $this->size : ' size-default';
 
         return $classes;
     }
