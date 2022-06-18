@@ -205,16 +205,6 @@ a {
     box-shadow: 0 0 0 0 rgba(0, 0, 0, .2), 0 0 0 0 rgba(0, 0, 0, .14), 0 0 0 0 rgba(0, 0, 0, .12);
 }
 
-/** Padding **/
-
-.pa-2 {
-    padding: 8px;
-}
-
-.pa-4 {
-    padding: 16px;
-}
-
 /** display **/
 .d-inline-block {
     display: inline-block;
