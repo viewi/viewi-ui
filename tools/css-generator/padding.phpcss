@@ -1,0 +1,66 @@
+<?php
+
+$config = include 'cssConfig.php';
+
+$paddings = [
+    'pa' => ['padding'],
+    'px' => ['padding-right', 'padding-left'],
+    'py' => ['padding-top', 'padding-bottom'],
+    'pt' => ['padding-top'],
+    'pr' => ['padding-right'],
+    'pb' => ['padding-bottom'],
+    'pl' => ['padding-left']
+];
+
+?>
+/** Padding **/
+
+<?php
+
+function generatePaddingCss($paddings, $config, $prefix ='', $indentation = '')
+{
+
+foreach ($paddings as $paddingName => $paddingProps) :
+foreach (range(0, 16) as $size) :
+?>
+<?= $indentation ?>.<?= $paddingName . $prefix ?>-<?= $size ?> {
+<?php
+foreach ($paddingProps as $paddingProperty) :
+?>
+    <?= $indentation ?><?= $paddingProperty ?>: <?= $size * 4 ?>px !important;
+<?php
+endforeach;
+?>
+<?= $indentation ?>}
+
+<?php
+endforeach;
+?>
+<?= $indentation ?>.<?= $paddingName . $prefix ?>-auto {
+<?php
+foreach ($paddingProps as $paddingProperty) :
+?>
+    <?= $indentation ?><?= $paddingProperty ?>: auto !important;
+<?php
+endforeach;
+?>
+<?= $indentation ?>}
+
+<?php
+endforeach;
+}
+
+generatePaddingCss($paddings, $config);
+// MEDIA
+
+foreach ($config['breakpoints'] as $breakPointName => $minWidth) :
+?>
+
+@media(min-width:<?= $minWidth ?>) {
+<?php
+generatePaddingCss($paddings, $config, '-' . $breakPointName, '    ');
+?>
+}
+
+<?php
+endforeach;
