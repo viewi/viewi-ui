@@ -16,6 +16,9 @@
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
+}
+
+.viewi-button.has-background {
     background-color: #f5f5f5;
 }
 
@@ -44,6 +47,34 @@
     max-width: auto;
 }
 
+.viewi-button-absolute {
+    position: absolute
+}
+
+.viewi-button-fixed {
+    position: fixed
+}
+
+.viewi-button-absolute.pos-right,
+.viewi-button-fixed.pos-right {
+    right: 16px
+}
+
+.viewi-button-absolute.pos-left,
+.viewi-button-fixed.pos-left {
+    left: 16px
+}
+
+.viewi-button-absolute.pos-top,
+.viewi-button-fixed.pos-top {
+    top: 16px
+}
+
+.viewi-button-absolute.pos-bottom,
+.viewi-button-fixed.pos-bottom {
+    bottom: 16px
+}
+
 .viewi-button.disabled {
     pointer-events: none;
 }
@@ -61,7 +92,7 @@
     display: none;
 }
 
-.viewi-button.plain:not(.v-btn--active):not(.v-btn--loading):not(:focus):not(:hover) {
+.viewi-button.plain:not(.pos-active):not(.pos-loading):not(:focus):not(:hover) {
     opacity: .62;
 }
 
@@ -77,6 +108,38 @@
     border-radius: 28px
 }
 
+.viewi-button.pill,
+.viewi-button.icon {
+    min-height: 0;
+    min-width: 0;
+    padding: 0
+}
+
+.viewi-button.icon.size-xsmall {
+    height: 20px;
+    width: 20px
+}
+
+.viewi-button.icon.size-small {
+    height: 28px;
+    width: 28px
+}
+
+.viewi-button.icon.size-default {
+    height: 36px;
+    width: 36px
+}
+
+.viewi-button.icon.size-large {
+    height: 44px;
+    width: 44px
+}
+
+.viewi-button.icon.size-xlarge {
+    height: 52px;
+    width: 52px
+}
+
 .viewi-button.pill {
     width: 36px;
     height: 36px;
@@ -84,7 +147,7 @@
     border-radius: 50%
 }
 
-.viewi-button.size-default:not(.pill) {    
+.viewi-button.size-default:not(.pill) {
     font-size: .875rem;
     height: 36px;
     min-width: 64px;
