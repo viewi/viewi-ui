@@ -220,3 +220,48 @@ a {
 .card-mark-container {
     background: #f7f7f7;
 }
+
+.rotate-me {
+    animation: rotate-animation 1s infinite;
+    display: flex;
+}
+
+@-moz-keyframes rotate-animation {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes rotate-animation {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes rotate-animation {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-animation {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
