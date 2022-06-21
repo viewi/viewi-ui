@@ -40,6 +40,73 @@
     opacity: 0.08;
 }
 
+.viewi-button>.button-content .viewi-icon {
+    color: inherit
+}
+
+.button-content {
+    align-items: center;
+    color: inherit;
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: inherit;
+    line-height: normal;
+    position: relative;
+    transition: inherit;
+    transition-property: opacity
+}
+
+.button-content .viewi-icon.viewi-icon.pos--left,
+.button-content .viewi-icon.viewi-icon.pos--right {
+    font-size: 18px;
+    height: 18px;
+    width: 18px
+}
+
+.is-ltr .button-content .viewi-icon.pos-left {
+    margin-left: -4px;
+    margin-right: 8px
+}
+
+.is-ltr .button-content .viewi-icon.pos-right,
+.is-rtl .button-content .viewi-icon.pos-left {
+    margin-left: 8px;
+    margin-right: -4px
+}
+
+.is-rtl .button-content .viewi-icon.pos-right {
+    margin-left: -4px;
+    margin-right: 8px
+}
+
+.viewi-button.plain:not(.viewi-button.active):not(.button-loading):not(:focus):not(:hover) .button-content {
+    opacity: .62
+}
+
+.button-loading .button-content {
+    opacity: 0
+}
+
+.button-loader {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.button-loading {
+    pointer-events: none;
+    transition: none
+}
+
+.button-loading .button-content {
+    opacity: 0
+}
+
 .viewi-button.block {
     display: flex;
     flex: 1 0 auto;
@@ -90,10 +157,6 @@
 
 .viewi-button.plain:before {
     display: none;
-}
-
-.viewi-button.plain:not(.pos-active):not(.pos-loading):not(:focus):not(:hover) {
-    opacity: .62;
 }
 
 .viewi-button.text {
