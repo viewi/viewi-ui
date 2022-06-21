@@ -34,6 +34,7 @@ class Button extends BaseComponent
     public ?string $href = null;
     public ?string $target = null;
     public ?string $type = 'button';
+    public bool $loading = false;
 
     function __mounted()
     {
@@ -51,7 +52,7 @@ class Button extends BaseComponent
         $classes .= $isElevated ? ' elevation-default' : '';
         $classes .= $this->hasBackground() ? ' has-background' : '';
         $classes .= $this->elevation !== null && $isElevated ? ' elevation-' . $this->elevation : '';
-        if ($this->color) {
+        if ($this->color && !$this->disabled) {
             $classes .= ' ' . $this->color . ($this->outlined || $this->plain || $this->text || $this->icon ? '-text' : '');
         }
         $classes .= $this->outlined ? ' outlined' : '';
@@ -68,6 +69,7 @@ class Button extends BaseComponent
         $classes .= $this->top ? ' pos-top' : '';
         $classes .= $this->bottom ? ' pos-bottom' : '';
         $classes .= $this->icon ? ' icon' : '';
+        $classes .= $this->loading ? ' button-loading' : '';
         return $classes;
     }
 
