@@ -91,6 +91,10 @@ class Button extends BaseComponent
 
     function onClick(DOMEvent $event)
     {
+        // TODO: !retainFocusOnClick
+        if (!$this->pill && $event->detail) {
+            $this->_element->blur();
+        }
         $this->emitEvent('click', $event);
     }
 }
