@@ -79,6 +79,10 @@
     margin-right: 8px
 }
 
+.viewi-button:focus:before {
+    opacity: .24
+}
+
 .viewi-button.plain:not(.viewi-button.active):not(.button-loading):not(:focus):not(:hover) .button-content {
     opacity: .62
 }
