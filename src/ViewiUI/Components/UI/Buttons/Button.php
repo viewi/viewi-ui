@@ -10,6 +10,11 @@ class Button extends BaseComponent
     public string $tag = 'button';
     public bool $block = false;
     public bool $disabled = false;
+    /**
+     * @options [null, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,
+     *           13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+     * @var null|int
+     */
     public ?int $elevation = null;
     public ?string $color = null;
     public bool $outlined = false;
@@ -26,7 +31,7 @@ class Button extends BaseComponent
     public bool $left = false;
     public bool $depressed = false;
     /**
-     * 
+     * @options ['', 'xsmall', 'small', 'large', 'xlarge']
      * @var '' | 'xsmall' | 'small' | 'large' | 'xlarge'
      */
     public string $size = '';
@@ -34,6 +39,10 @@ class Button extends BaseComponent
     public ?string $href = null;
     public ?string $target = null;
     public ?string $type = 'button';
+    /**
+     * @options [true, false]
+     * @var bool
+     */
     public bool $loading = false;
 
     function __mounted()
