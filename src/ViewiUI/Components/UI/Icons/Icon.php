@@ -26,7 +26,10 @@ class Icon extends BaseComponent
 
     function getClasses()
     {
-        $classes = 'viewi-icon mdi ' . $this->name;
+        $classes = 'viewi-icon ' . $this->name;
+        if (strpos($this->name, 'mdi') !== false) {
+            $classes .= ' mdi';
+        }
         if ($this->color) {
             $classes .= ' ' . $this->color . '-text';
         }
