@@ -1,4 +1,8 @@
-<link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+<link if="{isMaterial()}" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css"
+    rel="stylesheet">
+<link if="{isFontAwesome4()}" href="https://cdn.jsdelivr.net/npm/font-awesome@4.x/css/font-awesome.min.css"
+    rel="stylesheet">
+<link if="{isFontAwesome5()}" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
 <CssBundle links="{[
     '/viewi-ui/css/ress.css',
     '/viewi-ui/css/base.css',
@@ -8,4 +12,4 @@
     '/viewi-ui/css/column.css',
     '/viewi-ui/css/margin.css',
     '/viewi-ui/css/padding.css'
-    ]}" minify="false" shakeTree="false" combine="false" />
+    ]}" minify="true" shakeTree="true" combine="true" />
