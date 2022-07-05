@@ -1,0 +1,4 @@
+<div role="alert" class="{getClasses()}">
+    <div class="alert-wrapper"><Icon if="{hasIcon()}" name="{getIcon()}" class="alert-icon" /><slot>Alert</slot></div>    
+    <div if="{hasBorder()}" class="{getBorderClasses()}"></div>
+</div>
