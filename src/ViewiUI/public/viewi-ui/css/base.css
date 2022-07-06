@@ -15,6 +15,16 @@ a {
     color: #1867c0;
 }
 
+.dark-text {
+    color: #FFF !important;
+    caret-color: #FFF !important;
+}
+
+.light-text {
+    color: #000 !important;
+    caret-color: #000 !important;
+}
+
 .primary {
     background-color: #1867c0 !important;
     border-color: #1867c0 !important;
