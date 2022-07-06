@@ -13,6 +13,40 @@
     display: flex
 }
 
+.alert-content {
+    flex: 1 1 auto
+}
+
+.alert-doc .alert-content p:last-child {
+    margin-bottom: 0 !important
+}
+
+.is-ltr .viewi-alert>.alert-content,
+.is-ltr .viewi-alert>.v-icon {
+    margin-right: 16px
+}
+
+.is-rtl .viewi-alert>.alert-content,
+.is-rtl .viewi-alert>.v-icon {
+    margin-left: 16px
+}
+
+.is-ltr .viewi-alert>.v-icon+.alert-content {
+    margin-right: 0
+}
+
+.is-rtl .viewi-alert>.v-icon+.alert-content {
+    margin-left: 0
+}
+
+.is-ltr .viewi-alert>.alert-content+.v-icon {
+    margin-right: 0
+}
+
+.is-rtl .viewi-alert>.alert-content+.v-icon {
+    margin-left: 0
+}
+
 .alert-icon {
     align-self: flex-start;
     border-radius: 50%;
@@ -166,6 +200,14 @@
     pointer-events: none;
     right: 0;
     top: 0
+}
+
+.is-ltr .alert-dismissible {
+    margin: -16px -8px -16px 8px
+}
+
+.is-rtl .alert-dismissible {
+    margin: -16px 8px -16px -8px
 }
 
 /** Move to sheet.css */
