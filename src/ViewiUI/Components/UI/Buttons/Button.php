@@ -16,6 +16,10 @@ class Button extends BaseComponent
      * @var null|int
      */
     public ?int $elevation = null;
+    /**
+     * @options [NULL, 'dark', 'light', 'success', 'error', 'primary', 'secondary', 'accent', 'warning', 'tertiary', 'info']
+     * @var NULL | 'dark' | 'light' | 'success' | 'error'
+     */
     public ?string $color = null;
     public bool $outlined = false;
     public bool $plain = false;
@@ -79,6 +83,7 @@ class Button extends BaseComponent
         $classes .= $this->bottom ? ' pos-bottom' : '';
         $classes .= $this->icon ? ' icon' : '';
         $classes .= $this->loading ? ' button-loading' : '';
+        $classes .= isset($this->_props['class']) ? ' ' . $this->_props['class'] : '';
         return $classes;
     }
 
