@@ -3,7 +3,6 @@
 namespace ViewiUI\Components\UI\Alerts;
 
 use Viewi\BaseComponent;
-use Viewi\DOM\Events\DOMEvent;
 
 class Alert extends BaseComponent
 {
@@ -32,6 +31,8 @@ class Alert extends BaseComponent
      * @var ?string | false
      */
     public $icon = null;
+    public bool $dismissible = false;
+    public bool $active = true;
 
     function getClasses()
     {
@@ -68,8 +69,8 @@ class Alert extends BaseComponent
 
     function getIcon(): ?string
     {
-        if ($this->icon !== null && $this->icon !== false) {
-            return $this->icon;
+        if ($this->icon !== null) {
+            return $this->icon !== false ? $this->icon : null;
         }
         switch ($this->type) { // TODO: configurable icons per font, TODO: icons by selected font, TODO: include css
             case 'success':
@@ -85,12 +86,14 @@ class Alert extends BaseComponent
         }
     }
 
-    function onClick(DOMEvent $event)
+    function getIconColor(): ?string
     {
-        // TODO: !retainFocusOnClick
-        if (!$this->pill && $event->detail) {
-            $this->_element->blur();
-        }
-        $this->emitEvent('click', $event);
+        return $this->outlined || $this->text ? $this->type : 'dark';
+    }
+
+    function onDismiss()
+    {
+        $this->active = !$this->active;
+        $this->emitEvent('onDismiss', $this->active);
     }
 }
