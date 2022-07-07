@@ -218,3 +218,19 @@
 .viewi-sheet.viewi-alert.sheet-shaped {
     border-radius: 24px 4px
 }
+
+.sheet-shaped .alert-border.alert-border-bottom {
+    right: 7px;
+}
+
+.sheet-shaped .alert-border.alert-border-top {
+    left: 7px;
+}
+
+.sheet-shaped .alert-border.alert-border-left {
+    top: 7px;
+}
+
+.sheet-shaped .alert-border.alert-border-bottom {
+    right: 7px;
+}

@@ -33,6 +33,7 @@ class Alert extends BaseComponent
     public $icon = null;
     public bool $dismissible = false;
     public bool $active = true;
+    public bool $coloredBorder = false;
 
     function getClasses()
     {
@@ -41,7 +42,7 @@ class Alert extends BaseComponent
         $classes .= $this->outlined ? ' alert-outlined' : '';
         $classes .= $this->prominent ? ' alert-prominent' : '';
         $classes .= $this->text ? ' alert-text' : '';
-        $classes .= ' ' . $this->type . ($this->outlined || $this->text ? '-text' : '');
+        $classes .= (!$this->coloredBorder || !$this->hasBorder()) && $this->type ? ' ' . $this->type . ($this->outlined || $this->text ? '-text' : '') : '';
         $classes .= $this->elevation > 0 ? ' elevation-' . $this->elevation : '';
         $classes .= $this->shaped ? ' sheet-shaped' : '';
         $classes .= $this->tile ? ' sheet-tile' : '';
@@ -52,9 +53,17 @@ class Alert extends BaseComponent
     function getBorderClasses(): ?string
     {
         if ($this->hasBorder()) {
-            return $this->border ? ' alert-border alert-border-' . $this->border : '';
+            return 'alert-border alert-border-' . $this->border
+                . ($this->coloredBorder ? ' alert-border-has-color'
+                    . ($this->type ? ' ' . $this->type : '')
+                    : '');
         }
         return null;
+    }
+
+    function getIconClasses(): ?string
+    {
+        return 'alert-icon' . ($this->coloredBorder && $this->type ? ' ' . $this->type . '-text' : '');
     }
 
     function hasBorder(): bool
@@ -88,7 +97,7 @@ class Alert extends BaseComponent
 
     function getIconColor(): ?string
     {
-        return $this->outlined || $this->text ? $this->type : 'dark';
+        return $this->outlined || $this->text || $this->coloredBorder ? $this->type : 'dark';
     }
 
     function onDismiss()
