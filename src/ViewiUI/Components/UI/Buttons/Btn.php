@@ -5,7 +5,7 @@ namespace ViewiUI\Components\UI\Buttons;
 use Viewi\BaseComponent;
 use Viewi\DOM\Events\DOMEvent;
 
-class Button extends BaseComponent
+class Btn extends BaseComponent
 {
     public string $tag = 'button';
     public bool $block = false;
