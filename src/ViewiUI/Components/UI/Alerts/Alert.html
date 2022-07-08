@@ -3,8 +3,8 @@
         <Icon if="{hasIcon()}" name="{getIcon()}" class="{getIconClasses()}" />
         <div class="alert-content"><slot></slot></div>        
         <div if="{hasBorder()}" class="{getBorderClasses()}"></div>
-        <Button if="$dismissible" color="{getIconColor()}" icon="true" size="small" class="alert-dismissible" (click)="onDismiss()">
+        <Btn if="$dismissible" color="{getIconColor()}" icon="true" size="small" class="alert-dismissible" (click)="onDismiss()">
             <Icon name="mdi-close-circle" />
-        </Button>
+        </Btn>
     </div>
 </div>
