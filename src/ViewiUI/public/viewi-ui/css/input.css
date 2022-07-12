@@ -224,10 +224,10 @@
     padding: 0 4px;
 }
 
-.legend-ghost { 
+.legend-ghost {
     width: 0px;
 }
 
-.input-is-label-active .legend-ghost { 
+.input-is-label-active .legend-ghost {
     width: auto;
 }
