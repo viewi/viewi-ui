@@ -15,6 +15,12 @@ class TextField extends BaseComponent
     public bool $solo = false;
     public bool $filled = false;
     public bool $outlined = false;
+    public bool $booted = false;
+
+    function __mounted()
+    {
+        $this->booted = true;
+    }
 
     function getId(): string
     {

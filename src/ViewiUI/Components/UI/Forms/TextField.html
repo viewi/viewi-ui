@@ -1,8 +1,18 @@
-<div class="viewi-input text-field" class.primary-text="$isFocused" class.input-is-label-active="$isFocused || $value"
-    class.input-is-focused="$isFocused" class.text-field-solo="$solo" class.text-field-enclosed="{isEnclosed()}"
-    class.text-field-filled="$filled">
+<div class="viewi-input text-field" 
+    class.primary-text="$isFocused" 
+    class.input-is-label-active="$isFocused || $value"
+    class.input-is-focused="$isFocused" 
+    class.text-field-solo="$solo" 
+    class.text-field-enclosed="{isEnclosed()}"
+    class.text-field-filled="$filled" 
+    class.text-field-outlined="$outlined" 
+    class.text-field-is-booted="$booted">
     <div class="input-control">
         <div class="input-slot">
+            <fieldset if="$outlined" aria-hidden="true">
+                <legend class="legend-ghost"><span class="notranslate label-ghost">{{ $isFocused || $value ? $label :
+                        '&#8203;' }}</span></legend>
+            </fieldset>
             <div class="text-field-slot">
                 <label if="!$solo || (!$value && !$isFocused)" for="{getId()}" class="viewi-label"
                     class.label-active="$isFocused || $value" class.primary-text="$isFocused">$label</label>
