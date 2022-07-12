@@ -1,0 +1,704 @@
+/** text-field */
+
+.text-field>.input-control>.input-slot:before {
+    border-color: rgba(0, 0, 0, .42)
+}
+
+.text-field:not(.input-has-state):hover>.input-control>.input-slot:before {
+    border-color: rgba(0, 0, 0, .87)
+}
+
+.text-field.input-is-disabled .input-slot:before {
+    border-image: repeating-linear-gradient(90deg, rgba(0, 0, 0, .38), rgba(0, 0, 0, .38) 2px, transparent 0, transparent 4px) 1 repeat
+}
+
+.text-field-filled>.input-control>.input-slot {
+    background: rgba(0, 0, 0, .06)
+}
+
+.text-field-filled:not(.input-is-focused):not(.input-has-state)>.input-control>.input-slot:hover {
+    background: rgba(0, 0, 0, .12)
+}
+
+.text-field-solo>.input-control>.input-slot {
+    background: #fff
+}
+
+.text-field-solo-inverted>.input-control>.input-slot {
+    background: rgba(0, 0, 0, .06)
+}
+
+.text-field-solo-inverted.input-is-focused>.input-control>.input-slot {
+    background: #424242
+}
+
+.text-field-solo-inverted.input-is-focused>.input-control>.input-slot input {
+    color: #fff
+}
+
+.text-field-solo-inverted.input-is-focused>.input-control>.input-slot input::-moz-placeholder {
+    color: hsla(0, 0%, 100%, .5)
+}
+
+.text-field-solo-inverted.input-is-focused>.input-control>.input-slot input:-ms-input-placeholder {
+    color: hsla(0, 0%, 100%, .5)
+}
+
+.text-field-solo-inverted.input-is-focused>.input-control>.input-slot input::placeholder {
+    color: hsla(0, 0%, 100%, .5)
+}
+
+.text-field-solo-inverted.input-is-focused>.input-control>.input-slot .viewi-label {
+    color: hsla(0, 0%, 100%, .7)
+}
+
+.text-field-outlined:not(.input-is-focused):not(.input-has-state)>.input-control>.input-slot fieldset {
+    color: rgba(0, 0, 0, .38)
+}
+
+.text-field-outlined:not(.input-is-focused):not(.input-has-state):not(.input-is-disabled)>.input-control>.input-slot:hover fieldset {
+    color: rgba(0, 0, 0, .86)
+}
+
+.text-field-outlined:not(.input-is-focused).input-is-disabled>.input-control>.input-slot fieldset {
+    color: rgba(0, 0, 0, .26)
+}
+
+.theme-dark.text-field>.input-control>.input-slot:before {
+    border-color: hsla(0, 0%, 100%, .7)
+}
+
+.theme-dark.text-field:not(.input-has-state):hover>.input-control>.input-slot:before {
+    border-color: #fff
+}
+
+.theme-dark.text-field.input-is-disabled .input-slot:before {
+    border-image: repeating-linear-gradient(90deg, hsla(0, 0%, 100%, .5), hsla(0, 0%, 100%, .5) 2px, transparent 0, transparent 4px) 1 repeat
+}
+
+.theme-dark.text-field-filled>.input-control>.input-slot {
+    background: hsla(0, 0%, 100%, .08)
+}
+
+.theme-dark.text-field-filled:not(.input-is-focused):not(.input-has-state)>.input-control>.input-slot:hover {
+    background: hsla(0, 0%, 100%, .16)
+}
+
+.theme-dark.text-field-solo>.input-control>.input-slot {
+    background: #1e1e1e
+}
+
+.theme-dark.text-field-solo-inverted>.input-control>.input-slot {
+    background: hsla(0, 0%, 100%, .16)
+}
+
+.theme-dark.text-field-solo-inverted.input-is-focused>.input-control>.input-slot {
+    background: #fff
+}
+
+.theme-dark.text-field-solo-inverted.input-is-focused>.input-control>.input-slot input {
+    color: rgba(0, 0, 0, .87)
+}
+
+.theme-dark.text-field-solo-inverted.input-is-focused>.input-control>.input-slot input::-moz-placeholder {
+    color: rgba(0, 0, 0, .38)
+}
+
+.theme-dark.text-field-solo-inverted.input-is-focused>.input-control>.input-slot input:-ms-input-placeholder {
+    color: rgba(0, 0, 0, .38)
+}
+
+.theme-dark.text-field-solo-inverted.input-is-focused>.input-control>.input-slot input::placeholder {
+    color: rgba(0, 0, 0, .38)
+}
+
+.theme-dark.text-field-solo-inverted.input-is-focused>.input-control>.input-slot .viewi-label {
+    color: rgba(0, 0, 0, .6)
+}
+
+.theme-dark.text-field-outlined:not(.input-is-focused):not(.input-has-state)>.input-control>.input-slot fieldset {
+    color: hsla(0, 0%, 100%, .24)
+}
+
+.theme-dark.text-field-outlined:not(.input-is-focused):not(.input-has-state):not(.input-is-disabled)>.input-control>.input-slot:hover fieldset {
+    color: #fff
+}
+
+.theme-dark.text-field-outlined:not(.input-is-focused).input-is-disabled>.input-control>.input-slot fieldset {
+    color: hsla(0, 0%, 100%, .16)
+}
+
+.text-field {
+    padding-top: 12px;
+    margin-top: 4px
+}
+
+.text-field-prefix,
+.text-field-suffix {
+    line-height: 20px
+}
+
+.text-field input {
+    flex: 1 1 auto;
+    line-height: 20px;
+    padding: 8px 0;
+    max-width: 100%;
+    min-width: 0;
+    width: 100%
+}
+
+.text-field .input-control,
+.text-field .input-slot,
+.text-field fieldset {
+    border-radius: inherit
+}
+
+.text-field.input-has-state .input-control>.text-field-details>.counter,
+.text-field.input-is-disabled .input-control>.text-field-details>.counter,
+.text-field.input-is-disabled .input-control>.text-field-details>.messages,
+.text-field .input-control,
+.text-field fieldset {
+    color: currentColor
+}
+
+.text-field.input-dense {
+    padding-top: 0
+}
+
+.text-field.input-dense .viewi-label {
+    top: 4px
+}
+
+.text-field.input-dense:not(.text-field-outlined) .text-field-prefix,
+.text-field.input-dense:not(.text-field-outlined) .text-field-suffix,
+.text-field.input-dense:not(.text-field-outlined) input {
+    padding: 4px 0 2px
+}
+
+.text-field.input-dense:not(.text-field-outlined) .text-field-prefix {
+    padding-right: 4px
+}
+
+.text-field.input-dense:not(.text-field-outlined) .text-field-suffix {
+    padding-left: 4px
+}
+
+.text-field.input-dense[type=text]::-ms-clear {
+    display: none
+}
+
+.text-field.input-dense .input-append-inner,
+.text-field.input-dense .input-prepend-inner {
+    margin-top: 0
+}
+
+.text-field .input-append-inner,
+.text-field .input-prepend-inner {
+    align-self: flex-start;
+    display: inline-flex;
+    margin-top: 4px;
+    line-height: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.is-ltr .text-field .input-prepend-inner {
+    margin-right: auto;
+    padding-right: 4px
+}
+
+.is-ltr .text-field .input-append-inner,
+.is-rtl .text-field .input-prepend-inner {
+    margin-left: auto;
+    padding-left: 4px
+}
+
+.is-rtl .text-field .input-append-inner {
+    margin-right: auto;
+    padding-right: 4px
+}
+
+.text-field .viewi-counter {
+    white-space: nowrap
+}
+
+.is-ltr .text-field .viewi-counter {
+    margin-left: 8px
+}
+
+.is-rtl .text-field .viewi-counter {
+    margin-right: 8px
+}
+
+.text-field .viewi-label {
+    max-width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    top: 6px;
+    white-space: nowrap;
+    pointer-events: none
+}
+
+.is-ltr .text-field .viewi-label {
+    transform-origin: top left
+}
+
+.is-rtl .text-field .viewi-label {
+    transform-origin: top right
+}
+
+.text-field .label-active {
+    max-width: 133%;
+    transform: translateY(-18px) scale(.75);
+    pointer-events: auto
+}
+
+.text-field>.input-control>.input-slot {
+    cursor: text
+}
+
+.text-field>.input-control>.input-slot:after,
+.text-field>.input-control>.input-slot:before {
+    bottom: -1px;
+    content: "";
+    left: 0;
+    position: absolute;
+    transition: .3s cubic-bezier(.25, .8, .5, 1);
+    width: 100%
+}
+
+.text-field>.input-control>.input-slot:before {
+    border-color: inherit;
+    border-style: solid;
+    border-width: thin 0 0
+}
+
+.text-field>.input-control>.input-slot:after {
+    background-color: currentColor;
+    border-color: currentcolor;
+    border-style: solid;
+    border-width: thin 0;
+    transform: scaleX(0)
+}
+
+.text-field-details {
+    display: flex;
+    flex: 1 0 auto;
+    max-width: 100%;
+    min-height: 14px;
+    overflow: hidden
+}
+
+.text-field-prefix,
+.text-field-suffix {
+    align-self: center;
+    cursor: default;
+    transition: color .3s cubic-bezier(.25, .8, .5, 1);
+    white-space: nowrap
+}
+
+.is-ltr .text-field-prefix {
+    text-align: right;
+    padding-right: 4px
+}
+
+.is-rtl .text-field-prefix {
+    text-align: left;
+    padding-left: 4px
+}
+
+.text-field-suffix {
+    white-space: nowrap
+}
+
+.is-ltr .text-field-suffix {
+    padding-left: 4px
+}
+
+.is-rtl .text-field-suffix {
+    padding-right: 4px
+}
+
+.is-ltr .text-field-reverse .text-field-prefix {
+    text-align: left;
+    padding-right: 0;
+    padding-left: 4px
+}
+
+.is-rtl .text-field-reverse .text-field-prefix {
+    text-align: right;
+    padding-right: 4px;
+    padding-left: 0
+}
+
+.is-ltr .text-field-reverse .text-field-suffix {
+    padding-left: 0;
+    padding-right: 4px
+}
+
+.is-rtl .text-field-reverse .text-field-suffix {
+    padding-left: 4px;
+    padding-right: 0
+}
+
+.text-field>.input-control>.input-slot>.text-field-slot {
+    display: flex;
+    flex: 1 1 auto;
+    position: relative
+}
+
+.text-field:not(.text-field-is-booted) .label,
+.text-field:not(.text-field-is-booted) legend {
+    transition: none
+}
+
+.text-field-filled,
+.text-field-full-width,
+.text-field-outlined {
+    position: relative
+}
+
+.text-field-filled>.input-control>.input-slot,
+.text-field-full-width>.input-control>.input-slot,
+.text-field-outlined>.input-control>.input-slot {
+    align-items: stretch;
+    min-height: 56px
+}
+
+.text-field-filled.input-dense>.input-control>.input-slot,
+.text-field-full-width.input-dense>.input-control>.input-slot,
+.text-field-outlined.input-dense>.input-control>.input-slot {
+    min-height: 52px
+}
+
+.text-field-filled.input-dense.text-field-outlined.text-field-filled>.input-control>.input-slot,
+.text-field-filled.input-dense.text-field-outlined>.input-control>.input-slot,
+.text-field-filled.input-dense.text-field-single-line>.input-control>.input-slot,
+.text-field-full-width.input-dense.text-field-outlined.text-field-filled>.input-control>.input-slot,
+.text-field-full-width.input-dense.text-field-outlined>.input-control>.input-slot,
+.text-field-full-width.input-dense.text-field-single-line>.input-control>.input-slot,
+.text-field-outlined.input-dense.text-field-outlined.text-field-filled>.input-control>.input-slot,
+.text-field-outlined.input-dense.text-field-outlined>.input-control>.input-slot,
+.text-field-outlined.input-dense.text-field-single-line>.input-control>.input-slot {
+    min-height: 40px
+}
+
+.text-field-outlined {
+    border-radius: 4px
+}
+
+.text-field-enclosed .input-append-inner,
+.text-field-enclosed .input-append-outer,
+.text-field-enclosed .input-prepend-inner,
+.text-field-enclosed .input-prepend-outer,
+.text-field-full-width .input-append-inner,
+.text-field-full-width .input-append-outer,
+.text-field-full-width .input-prepend-inner,
+.text-field-full-width .input-prepend-outer {
+    margin-top: 17px
+}
+
+.text-field-enclosed.input-dense:not(.text-field-solo) .input-append-inner,
+.text-field-enclosed.input-dense:not(.text-field-solo) .input-append-outer,
+.text-field-enclosed.input-dense:not(.text-field-solo) .input-prepend-inner,
+.text-field-enclosed.input-dense:not(.text-field-solo) .input-prepend-outer,
+.text-field-full-width.input-dense:not(.text-field-solo) .input-append-inner,
+.text-field-full-width.input-dense:not(.text-field-solo) .input-append-outer,
+.text-field-full-width.input-dense:not(.text-field-solo) .input-prepend-inner,
+.text-field-full-width.input-dense:not(.text-field-solo) .input-prepend-outer {
+    margin-top: 14px
+}
+
+.text-field-enclosed.input-dense:not(.text-field-solo).text-field-single-line .input-append-inner,
+.text-field-enclosed.input-dense:not(.text-field-solo).text-field-single-line .input-append-outer,
+.text-field-enclosed.input-dense:not(.text-field-solo).text-field-single-line .input-prepend-inner,
+.text-field-enclosed.input-dense:not(.text-field-solo).text-field-single-line .input-prepend-outer,
+.text-field-full-width.input-dense:not(.text-field-solo).text-field-single-line .input-append-inner,
+.text-field-full-width.input-dense:not(.text-field-solo).text-field-single-line .input-append-outer,
+.text-field-full-width.input-dense:not(.text-field-solo).text-field-single-line .input-prepend-inner,
+.text-field-full-width.input-dense:not(.text-field-solo).text-field-single-line .input-prepend-outer {
+    margin-top: 9px
+}
+
+.text-field-enclosed.input-dense:not(.text-field-solo).text-field-outlined .input-append-inner,
+.text-field-enclosed.input-dense:not(.text-field-solo).text-field-outlined .input-append-outer,
+.text-field-enclosed.input-dense:not(.text-field-solo).text-field-outlined .input-prepend-inner,
+.text-field-enclosed.input-dense:not(.text-field-solo).text-field-outlined .input-prepend-outer,
+.text-field-full-width.input-dense:not(.text-field-solo).text-field-outlined .input-append-inner,
+.text-field-full-width.input-dense:not(.text-field-solo).text-field-outlined .input-append-outer,
+.text-field-full-width.input-dense:not(.text-field-solo).text-field-outlined .input-prepend-inner,
+.text-field-full-width.input-dense:not(.text-field-solo).text-field-outlined .input-prepend-outer {
+    margin-top: 8px
+}
+
+.text-field-filled .label,
+.text-field-full-width .viewi-label {
+    top: 18px
+}
+
+.text-field-filled .label-active,
+.text-field-full-width .label-active {
+    transform: translateY(-6px) scale(.75)
+}
+
+.text-field-filled.input-dense .label,
+.text-field-full-width.input-dense .viewi-label {
+    top: 17px
+}
+
+.text-field-filled.input-dense .label-active,
+.text-field-full-width.input-dense .label-active {
+    transform: translateY(-10px) scale(.75)
+}
+
+.text-field-filled.input-dense.text-field-single-line .label,
+.text-field-full-width.input-dense.text-field-single-line .viewi-label {
+    top: 11px
+}
+
+.text-field-filled {
+    border-radius: 4px 4px 0 0
+}
+
+.text-field-filled:not(.text-field-single-line) input {
+    margin-top: 22px
+}
+
+.text-field-filled.input-dense:not(.text-field-single-line).text-field-outlined input {
+    margin-top: 0
+}
+
+.text-field-filled .text-field-prefix,
+.text-field-filled .text-field-suffix {
+    max-height: 32px;
+    margin-top: 20px
+}
+
+.text-field-full-width {
+    border-radius: 0
+}
+
+.text-field-outlined .text-field-slot,
+.text-field-single-line .text-field-slot {
+    align-items: center
+}
+
+.text-field.text-field-enclosed {
+    margin: 0;
+    padding: 0
+}
+
+.text-field.text-field-enclosed.text-field-single-line .text-field-prefix,
+.text-field.text-field-enclosed.text-field-single-line .text-field-suffix {
+    margin-top: 0
+}
+
+.text-field.text-field-enclosed:not(.text-field-filled) .progress-linear-background {
+    display: none
+}
+
+.text-field.text-field-enclosed .text-field-details,
+.text-field.text-field-enclosed:not(.text-field-rounded)>.input-control>.input-slot {
+    padding: 0 12px
+}
+
+.text-field.text-field-enclosed .text-field-details {
+    padding-top: 0;
+    margin-bottom: 8px
+}
+
+.is-ltr .text-field-reverse input {
+    text-align: right
+}
+
+.is-rtl .text-field-reverse input {
+    text-align: left
+}
+
+.is-ltr .text-field-reverse .viewi-label {
+    transform-origin: top right
+}
+
+.is-rtl .text-field-reverse .viewi-label {
+    transform-origin: top left
+}
+
+.text-field-reverse .text-field-slot,
+.text-field-reverse>.input-control>.input-slot {
+    flex-direction: row-reverse
+}
+
+.text-field-outlined>.input-control>.input-slot:after,
+.text-field-outlined>.input-control>.input-slot:before,
+.text-field-rounded>.input-control>.input-slot:after,
+.text-field-rounded>.input-control>.input-slot:before,
+.text-field-solo>.input-control>.input-slot:after,
+.text-field-solo>.input-control>.input-slot:before {
+    display: none
+}
+
+.text-field-outlined,
+.text-field-solo {
+    border-radius: 4px
+}
+
+.text-field-outlined {
+    margin-bottom: 16px;
+    transition: border .3s cubic-bezier(.25, .8, .5, 1)
+}
+
+.text-field-outlined .viewi-label {
+    top: 18px
+}
+
+.text-field-outlined .label-active {
+    transform: translateY(-24px) scale(.75)
+}
+
+.text-field-outlined.input-dense .viewi-label {
+    top: 10px
+}
+
+.text-field-outlined.input-dense .label-active {
+    transform: translateY(-16px) scale(.75)
+}
+
+.text-field-outlined fieldset {
+    border-collapse: collapse;
+    border: 1px solid;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: -5px;
+    transition-duration: .15s;
+    transition-property: color;
+    transition-timing-function: cubic-bezier(.25, .8, .25, 1)
+}
+
+.is-ltr .text-field-outlined fieldset {
+    padding-left: 8px
+}
+
+.is-ltr .text-field-outlined.text-field-reverse fieldset,
+.is-rtl .text-field-outlined fieldset {
+    padding-right: 8px
+}
+
+.is-rtl .text-field-outlined.text-field-reverse fieldset {
+    padding-left: 8px
+}
+
+.text-field-outlined legend {
+    line-height: 11px;
+    padding: 0;
+    transition: width .3s cubic-bezier(.25, .8, .5, 1)
+}
+
+.is-ltr .text-field-outlined legend {
+    text-align: left
+}
+
+.is-rtl .text-field-outlined legend {
+    text-align: right
+}
+
+.is-ltr .text-field-outlined.text-field-reverse legend {
+    margin-left: auto
+}
+
+.is-rtl .text-field-outlined.text-field-reverse legend {
+    margin-right: auto
+}
+
+.is-ltr .text-field-outlined.text-field-rounded legend {
+    margin-left: 12px
+}
+
+.is-rtl .text-field-outlined.text-field-rounded legend {
+    margin-right: 12px
+}
+
+.text-field-outlined>.input-control>.input-slot {
+    background: transparent
+}
+
+.text-field-outlined .text-field-prefix {
+    max-height: 32px
+}
+
+.text-field-outlined .input-append-outer,
+.text-field-outlined .input-prepend-outer {
+    margin-top: 18px
+}
+
+.text-field-outlined.input-has-state fieldset,
+.text-field-outlined.input-is-focused fieldset {
+    border: 2px solid
+}
+
+.text-field-rounded {
+    border-radius: 28px
+}
+
+.text-field-rounded>.input-control>.input-slot {
+    padding: 0 24px
+}
+
+.text-field-shaped {
+    border-radius: 16px 16px 0 0
+}
+
+.text-field.text-field-solo .viewi-label {
+    top: calc(50% - 9px)
+}
+
+.text-field.text-field-solo .input-control {
+    min-height: 48px;
+    padding: 0
+}
+
+.text-field.text-field-solo .input-control input {
+    caret-color: auto
+}
+
+.text-field.text-field-solo.input-dense>.input-control {
+    min-height: 38px
+}
+
+.text-field.text-field-solo:not(.text-field-solo-flat)>.input-control>.input-slot {
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12)
+}
+
+.text-field.text-field-solo .input-append-inner,
+.text-field.text-field-solo .input-prepend-inner {
+    align-self: center;
+    margin-top: 0
+}
+
+.text-field.text-field-solo .input-append-outer,
+.text-field.text-field-solo .input-prepend-outer {
+    margin-top: 12px
+}
+
+.text-field.text-field-solo.input-dense .input-append-outer,
+.text-field.text-field-solo.input-dense .input-prepend-outer {
+    margin-top: 7px
+}
+
+.text-field.input-is-focused>.input-control>.input-slot:after {
+    transform: scaleX(1)
+}
+
+.text-field.input-has-state>.input-control>.input-slot:before {
+    border-color: currentColor
+}
+
+.text-field .viewi-label {
+    left: 0px;
+    right: auto;
+    position: absolute;
+}
