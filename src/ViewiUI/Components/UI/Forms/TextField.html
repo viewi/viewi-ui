@@ -1,5 +1,6 @@
 <div class="{getClasses()}" class.primary-text="$isFocused" class.input-is-label-active="$isFocused || $hasValue"
-    class.input-is-focused="$isFocused" class.text-field-is-booted="$booted" (click)="onClick($event)">
+    class.input-is-focused="$isFocused" class.text-field-is-booted="$booted" (click)="onClick($event)"
+    (mousedown)="onMouseDown($event)">
     <div class="input-control">
         <div class="input-slot">
             <fieldset if="$outlined" aria-hidden="true">

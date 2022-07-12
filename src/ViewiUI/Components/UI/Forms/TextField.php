@@ -45,6 +45,15 @@ class TextField extends BaseComponent
         return $this->solo || $this->filled || $this->outlined;
     }
 
+    function onMouseDown(DOMEvent $event)
+    {
+        if ($event->target !== $this->_refs['input']) {
+            $event->preventDefault();
+            $event->stopPropagation();
+        }
+        $this->emitEvent('mousedown', $event);
+    }
+
     function onClick($event)
     {
         $this->emitEvent('click', $event);
