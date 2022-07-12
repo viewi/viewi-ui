@@ -1,0 +1,215 @@
+/** viewi-input */
+
+.input,
+.viewi-input input,
+.viewi-input textarea {
+    color: rgba(0, 0, 0, .87)
+}
+
+.viewi-input input::-moz-placeholder,
+.viewi-input textarea::-moz-placeholder {
+    color: rgba(0, 0, 0, .38)
+}
+
+.viewi-input input:-ms-input-placeholder,
+.viewi-input textarea:-ms-input-placeholder {
+    color: rgba(0, 0, 0, .38)
+}
+
+.viewi-input input::placeholder,
+.viewi-input textarea::placeholder {
+    color: rgba(0, 0, 0, .38)
+}
+
+.input-is-disabled,
+.input-is-disabled input,
+.input-is-disabled textarea {
+    color: rgba(0, 0, 0, .38)
+}
+
+.theme-dark.input,
+.theme-dark.viewi-input input,
+.theme-dark.viewi-input textarea {
+    color: #fff
+}
+
+.theme-dark.viewi-input input::-moz-placeholder,
+.theme-dark.viewi-input textarea::-moz-placeholder {
+    color: hsla(0, 0%, 100%, .5)
+}
+
+.theme-dark.viewi-input input:-ms-input-placeholder,
+.theme-dark.viewi-input textarea:-ms-input-placeholder {
+    color: hsla(0, 0%, 100%, .5)
+}
+
+.theme-dark.viewi-input input::placeholder,
+.theme-dark.viewi-input textarea::placeholder {
+    color: hsla(0, 0%, 100%, .5)
+}
+
+.theme-dark.input-is-disabled,
+.theme-dark.input-is-disabled input,
+.theme-dark.input-is-disabled textarea {
+    color: hsla(0, 0%, 100%, .5)
+}
+
+.viewi-input {
+    align-items: flex-start;
+    display: flex;
+    flex: 1 1 auto;
+    font-size: 16px;
+    letter-spacing: normal;
+    max-width: 100%;
+    text-align: left
+}
+
+.viewi-input .progress-linear {
+    top: calc(100% - 1px);
+    left: 0
+}
+
+.viewi-input input {
+    max-height: 32px
+}
+
+.viewi-input input:invalid,
+.viewi-input textarea:invalid {
+    box-shadow: none
+}
+
+.viewi-input input:active,
+.viewi-input input:focus,
+.viewi-input textarea:active,
+.viewi-input textarea:focus {
+    outline: none
+}
+
+.viewi-input .viewi-label {
+    height: 20px;
+    line-height: 20px;
+    letter-spacing: normal
+}
+
+.input-append-outer,
+.input-prepend-outer {
+    display: inline-flex;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    line-height: 1
+}
+
+.input-append-outer .icon,
+.input-prepend-outer .viewi-icon {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.is-ltr .input-append-outer {
+    margin-left: 9px
+}
+
+.is-ltr .input-prepend-outer,
+.is-rtl .input-append-outer {
+    margin-right: 9px
+}
+
+.is-rtl .input-prepend-outer {
+    margin-left: 9px
+}
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    min-width: 0;
+    width: 100%
+}
+
+.input-icon {
+    align-items: center;
+    display: inline-flex;
+    height: 24px;
+    flex: 1 0 auto;
+    justify-content: center;
+    min-width: 24px;
+    width: 24px
+}
+
+.input-icon-clear {
+    border-radius: 50%
+}
+
+.input-icon-clear .icon-disabled {
+    visibility: hidden
+}
+
+.input-slot {
+    align-items: center;
+    color: inherit;
+    display: flex;
+    margin-bottom: 8px;
+    min-height: inherit;
+    position: relative;
+    transition: .3s cubic-bezier(.25, .8, .5, 1);
+    width: 100%
+}
+
+.input-dense>.input-control>.input-slot {
+    margin-bottom: 4px
+}
+
+.input-is-disabled:not(.input-is-readonly) {
+    pointer-events: none
+}
+
+.input-is-loading>.input-control>.input-slot:after,
+.input-is-loading>.input-control>.input-slot:before {
+    display: none
+}
+
+.input-hide-details>.input-control>.input-slot {
+    margin-bottom: 0
+}
+
+.input-has-state.error-text .viewi-label {
+    -webkit-animation: viewi-shake .6s cubic-bezier(.25, .8, .5, 1);
+    animation: viewi-shake .6s cubic-bezier(.25, .8, .5, 1)
+}
+
+.input-hide-spin-buttons input::-webkit-inner-spin-button,
+.input-hide-spin-buttons input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0
+}
+
+.input-hide-spin-buttons input[type=number] {
+    -moz-appearance: textfield
+}
+
+.viewi-label {
+    color: rgba(0, 0, 0, .6)
+}
+
+.label-is-disabled {
+    color: rgba(0, 0, 0, .38)
+}
+
+.theme-dark.viewi-label {
+    color: hsla(0, 0%, 100%, .7)
+}
+
+.theme-dark.label-is-disabled {
+    color: hsla(0, 0%, 100%, .5)
+}
+
+.viewi-label {
+    font-size: 16px;
+    line-height: 1;
+    min-height: 8px;
+    transition: .3s cubic-bezier(.25, .8, .5, 1)
+}
