@@ -1,17 +1,5 @@
 /** text-field */
 
-.text-field>.input-control>.input-slot:before {
-    border-color: rgba(0, 0, 0, .42)
-}
-
-.text-field:not(.input-has-state):hover>.input-control>.input-slot:before {
-    border-color: rgba(0, 0, 0, .87)
-}
-
-.text-field.input-is-disabled .input-slot:before {
-    border-image: repeating-linear-gradient(90deg, rgba(0, 0, 0, .38), rgba(0, 0, 0, .38) 2px, transparent 0, transparent 4px) 1 repeat
-}
-
 .text-field-filled>.input-control>.input-slot {
     background: rgba(0, 0, 0, .06)
 }
@@ -349,7 +337,7 @@
     position: relative
 }
 
-.text-field:not(.text-field-is-booted) .label,
+.text-field:not(.text-field-is-booted) .viewi-label,
 .text-field:not(.text-field-is-booted) legend {
     transition: none
 }
@@ -433,7 +421,7 @@
     margin-top: 8px
 }
 
-.text-field-filled .label,
+.text-field-filled .viewi-label,
 .text-field-full-width .viewi-label {
     top: 18px
 }
@@ -443,7 +431,7 @@
     transform: translateY(-6px) scale(.75)
 }
 
-.text-field-filled.input-dense .label,
+.text-field-filled.input-dense .viewi-label,
 .text-field-full-width.input-dense .viewi-label {
     top: 17px
 }
@@ -453,7 +441,7 @@
     transform: translateY(-10px) scale(.75)
 }
 
-.text-field-filled.input-dense.text-field-single-line .label,
+.text-field-filled.input-dense.text-field-single-line .viewi-label,
 .text-field-full-width.input-dense.text-field-single-line .viewi-label {
     top: 11px
 }
@@ -701,4 +689,16 @@
     left: 0px;
     right: auto;
     position: absolute;
+}
+
+.text-field>.input-control>.input-slot:before {
+    border-color: rgba(0, 0, 0, .42)
+}
+
+.text-field:not(.input-has-state):hover>.input-control>.input-slot:before {
+    border-color: rgba(0, 0, 0, .87)
+}
+
+.text-field.input-is-disabled .input-slot:before {
+    border-image: repeating-linear-gradient(90deg, rgba(0, 0, 0, .38), rgba(0, 0, 0, .38) 2px, transparent 0, transparent 4px) 1 repeat
 }
