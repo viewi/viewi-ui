@@ -39,7 +39,7 @@ class Icon extends BaseComponent
         $classes .= $this->dense ? ' viewi-icon-dense' : '';
         $classes .= $this->disabled ? ' viewi-icon-disabled' : '';
         $classes .= $this->clickable() ? ' viewi-icon-link' : '';
-        $classes .= $this->class  !== null ? ' ' . $this->class : '';
+        $classes .= $this->class !== null ? ' ' . $this->class : '';
         return $classes;
     }
 
