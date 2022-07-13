@@ -1,8 +1,7 @@
 <div class="{getClasses()}" class.primary-text="$isFocused" class.input-is-label-active="$isFocused || $hasValue"
-    class.input-is-focused="$isFocused" class.text-field-is-booted="$booted" (click)="onClick($event)"
-    (mousedown)="onMouseDown($event)">
+    class.input-is-focused="$isFocused" class.text-field-is-booted="$booted">
     <div class="input-control">
-        <div class="input-slot">
+        <div class="input-slot" (click)="onClick($event)" (mousedown)="onMouseDown($event)">
             <fieldset if="$outlined" aria-hidden="true">
                 <legend class="legend-ghost"><span class="notranslate label-ghost">{{ $isFocused || $hasValue ? $label :
                         '&#8203;' }}</span></legend>
@@ -11,7 +10,20 @@
                 <label if="!$solo || (!$hasValue && !$isFocused)" for="{getId()}" class="viewi-label"
                     class.label-active="$isFocused || $hasValue" class.primary-text="$isFocused">$label</label>
                 <input #input id="{getId()}" type="text" placeholder="{$isFocused ? $placeholder : null}"
-                    (focus)="onFocus($event)" (blur)="onBlur($event)" (input)="onInput($event)" model="$value" />
+                    (focus)="onFocus($event)" (blur)="onBlur($event)" (input)="onInput($event)" model="$value" value="$value" />
+            </div>
+            <div class="input-append-inner">
+                <div if="$clearable && $hasValue" class="input-icon input-icon-clear">
+                    <Icon name="mdi-close-circle" (click)="onClearClick($event)"
+                        class="{$isFocused ? 'primary-text' : null} theme-light" />
+                </div>
+            </div>
+        </div>
+        <div class="text-field-details">
+            <div class="viewi-messages">
+                <div class="messages-wrapper">
+                    <div if="hasMessages()" foreach="getMessages() as $message" class="messages-message">$message</div>
+                </div>
             </div>
         </div>
     </div>

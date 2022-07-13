@@ -7,7 +7,7 @@ use Viewi\DOM\Events\DOMEvent;
 
 class TextField extends BaseComponent
 {
-    public string $value = '';
+    public ?string $value = null;
     public ?string $uid = null;
     public ?string $id = null;
     public string $label = '';
@@ -18,11 +18,16 @@ class TextField extends BaseComponent
     public bool $outlined = false;
     public bool $booted = false;
     public bool $hasValue = false;
+    public ?string $hint = null;
+    public bool $persistentHint = false;
+    public bool $clearable = false;
+    public array $messages = [];
 
     function __mounted()
     {
         $this->booted = true;
         $this->uid = $this->__id;
+        $this->hasValue = !!$this->value;
     }
 
     function getId(): string
@@ -40,10 +45,32 @@ class TextField extends BaseComponent
         return $classes;
     }
 
-    function isEnclosed()
+    function isEnclosed(): bool
     {
         return $this->solo || $this->filled || $this->outlined;
     }
+
+    function hasHint(): bool
+    {
+        // return !$this->hasMessages &&
+        return !!$this->hint &&
+            ($this->persistentHint || $this->isFocused);
+    }
+
+    function getMessages(): array
+    {
+        if ($this->hasHint()) {
+            return [$this->hint];
+        }
+        return [];
+    }
+
+    function hasMessages(): bool
+    {
+        return count($this->getMessages()) > 0;
+    }
+
+    // EVENTS
 
     function onMouseDown(DOMEvent $event)
     {
@@ -76,5 +103,12 @@ class TextField extends BaseComponent
     {
         $this->isFocused = false;
         $this->emitEvent('blur', $event);
+    }
+
+    function onClearClick($event)
+    {
+        $this->_refs['input']->focus();
+        $this->value = null;
+        $this->hasValue = false;
     }
 }
