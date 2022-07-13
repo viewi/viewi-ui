@@ -1,0 +1,35 @@
+/** viewi-messages */
+
+.viewi-messages {
+    color: rgba(0, 0, 0, .6)
+}
+
+.theme-dark.viewi-messages {
+    color: hsla(0, 0%, 100%, .7)
+}
+
+.viewi-messages {
+    flex: 1 1 auto;
+    font-size: 12px;
+    min-height: 14px;
+    min-width: 1px;
+    position: relative
+}
+
+.is-ltr .viewi-messages {
+    text-align: left
+}
+
+.is-rtl .viewi-messages {
+    text-align: right
+}
+
+.messages-message {
+    line-height: 12px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto
+}
