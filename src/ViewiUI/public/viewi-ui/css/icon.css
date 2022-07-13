@@ -1,5 +1,29 @@
 /** Icons **/
 
+.theme-light.viewi-icon {
+    color: rgba(0, 0, 0, .54)
+}
+
+.theme-light.viewi-icon:focus:after {
+    opacity: .12
+}
+
+.theme-light.viewi-icon.viewi-icon.icon-disabled {
+    color: rgba(0, 0, 0, .38) !important
+}
+
+.theme-dark.viewi-icon {
+    color: #fff
+}
+
+.theme-dark.viewi-icon:focus:after {
+    opacity: .24
+}
+
+.theme-dark.viewi-icon.viewi-icon.icon-disabled {
+    color: hsla(0, 0%, 100%, .5) !important
+}
+
 .viewi-icon {
     font-size: 24px;
     align-items: center;
