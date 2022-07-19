@@ -3,6 +3,7 @@
 namespace ViewiUI\Components\UI\Forms;
 
 use Viewi\BaseComponent;
+use Viewi\Components\Services\ClientTimer;
 use Viewi\DOM\Events\DOMEvent;
 
 class TextField extends BaseComponent
@@ -22,6 +23,19 @@ class TextField extends BaseComponent
     public bool $persistentHint = false;
     public bool $clearable = false;
     public array $messages = [];
+    public ?int $counter = null;
+    /**
+     * 
+     * @var callable
+     */
+    public $counterValue = null;
+    /**
+     * 
+     * @var null|callable[]
+     */
+    public ?array $rules = null;
+    public array $validationMessages = [];
+    public bool $hasValidationMessages = false;
 
     function __mounted()
     {
@@ -52,8 +66,8 @@ class TextField extends BaseComponent
 
     function hasHint(): bool
     {
-        // return !$this->hasMessages &&
-        return !!$this->hint &&
+        return !$this->hasValidationMessages &&
+            !!$this->hint &&
             ($this->persistentHint || $this->isFocused);
     }
 
@@ -61,6 +75,9 @@ class TextField extends BaseComponent
     {
         if ($this->hasHint()) {
             return [$this->hint];
+        }
+        if ($this->hasValidationMessages) {
+            return $this->validationMessages;
         }
         return [];
     }
@@ -70,7 +87,36 @@ class TextField extends BaseComponent
         return count($this->getMessages()) > 0;
     }
 
+    function getCurrentCount(): int
+    {
+        return $this->counterValue ? ($this->counterValue)($this->value) : strlen($this->value ?? '');
+    }
+
+    function validate()
+    {
+        $this->validationMessages = [];
+        $this->hasValidationMessages = false;
+        foreach ($this->rules as $validationRule) {
+            $validationResult = $validationRule($this->value);
+            if ($validationResult === true) {
+                continue;
+            }
+            $this->validationMessages[] = $validationResult === false ? 'Validation has failed' : $validationResult;
+            $this->hasValidationMessages = true;
+        }
+    }
+
+    function postValidate()
+    {
+        ClientTimer::setTimeoutStatic($this->validate, 0);
+    }
+
     // EVENTS
+    function onKeyDown(DOMEvent $event)
+    {
+        $this->emitEvent('keydown', $event);
+        $this->postValidate();
+    }
 
     function onMouseDown(DOMEvent $event)
     {
@@ -91,6 +137,7 @@ class TextField extends BaseComponent
     {
         $this->hasValue = !!$event->target->value;
         $this->emitEvent('input', $event);
+        $this->postValidate();
     }
 
     function onFocus($event)
@@ -103,6 +150,7 @@ class TextField extends BaseComponent
     {
         $this->isFocused = false;
         $this->emitEvent('blur', $event);
+        $this->postValidate();
     }
 
     function onClearClick($event)
@@ -110,5 +158,6 @@ class TextField extends BaseComponent
         $this->_refs['input']->focus();
         $this->value = null;
         $this->hasValue = false;
+        $this->postValidate();
     }
 }
