@@ -141,9 +141,9 @@
     border-radius: inherit
 }
 
-.text-field.input-has-state .input-control>.text-field-details>.counter,
-.text-field.input-is-disabled .input-control>.text-field-details>.counter,
-.text-field.input-is-disabled .input-control>.text-field-details>.messages,
+.text-field.input-has-state .input-control>.text-field-details>.viewi-counter,
+.text-field.input-is-disabled .input-control>.text-field-details>.viewi-counter,
+.text-field.input-is-disabled .input-control>.text-field-details>.viewi-messages,
 .text-field .input-control,
 .text-field fieldset {
     color: currentColor
@@ -218,6 +218,21 @@
 
 .is-rtl .text-field .viewi-counter {
     margin-right: 8px
+}
+
+.theme-light.viewi-counter {
+    color: rgba(0, 0, 0, .6)
+}
+
+.theme-dark.viewi-counter {
+    color: hsla(0, 0%, 100%, .7)
+}
+
+.viewi-counter {
+    flex: 0 1 auto;
+    font-size: 12px;
+    min-height: 12px;
+    line-height: 12px
 }
 
 .text-field .viewi-label {
