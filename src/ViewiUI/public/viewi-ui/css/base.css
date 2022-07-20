@@ -275,3 +275,35 @@ a {
         transform: rotate(360deg);
     }
 }
+
+@-webkit-keyframes viewi-shake {
+    59% {
+        margin-left: 0
+    }
+
+    60%,
+    80% {
+        margin-left: 2px
+    }
+
+    70%,
+    90% {
+        margin-left: -2px
+    }
+}
+
+@keyframes viewi-shake {
+    59% {
+        margin-left: 0
+    }
+
+    60%,
+    80% {
+        margin-left: 2px
+    }
+
+    70%,
+    90% {
+        margin-left: -2px
+    }
+}
