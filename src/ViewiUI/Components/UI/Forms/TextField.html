@@ -1,8 +1,19 @@
 <div class="{getClasses()}" class.primary-text="$isFocused" class.input-is-label-active="$isFocused || $hasValue"
     class.input-is-focused="$isFocused" class.text-field-is-booted="$booted" class.error-text="$hasValidationMessages"
-    class.input-has-state="$hasValidationMessages">
+    class.input-has-state="$hasValidationMessages" class.input-is-disabled="$disabled"
+    class.input-is-readonly="$readonly" class.input-hide-details="!showDetails()">
+    <div if="$prependIcon" class="input-prepend-outer">
+        <div class="input-icon input-icon-prepend">
+            <Icon name="$prependIcon" class="theme-light" />
+        </div>
+    </div>
     <div class="input-control">
         <div class="input-slot" (click)="onClick($event)" (mousedown)="onMouseDown($event)">
+            <div if="$prependInnerIcon" class="input-prepend-inner">
+                <div class="input-icon input-icon-prepend-inner">
+                    <Icon name="$prependInnerIcon" class="theme-light" />
+                </div>
+            </div>
             <fieldset if="$outlined" aria-hidden="true">
                 <legend class="legend-ghost"><span class="notranslate label-ghost">{{ $isFocused || $hasValue ? $label :
                         '&#8203;' }}</span></legend>
@@ -11,18 +22,21 @@
                 <label if="!$solo || (!$hasValue && !$isFocused)" for="{getId()}" class="viewi-label"
                     class.label-active="$isFocused || $hasValue" class.primary-text="$isFocused"
                     class.error-text="$hasValidationMessages">$label</label>
-                <input #input id="{getId()}" type="text" placeholder="{$isFocused ? $placeholder : null}"
-                    (focus)="onFocus($event)" (blur)="onBlur($event)" (input)="onInput($event)"
-                    (keydown)="onKeyDown($event)" model="$value" value="$value" />
+                <input #input id="{getId()}" type="$type" placeholder="{$isFocused ? $placeholder : null}"
+                    disabled="$disabled" readonly="$readonly" (focus)="onFocus($event)" (blur)="onBlur($event)"
+                    (input)="onInput($event)" (keydown)="onKeyDown($event)" model="$value" value="$value" />
             </div>
-            <div class="input-append-inner">
+            <div if="$appendIcon || ($clearable && $hasValue)" class="input-append-inner">
                 <div if="$clearable && $hasValue" class="input-icon input-icon-clear">
                     <Icon name="mdi-close-circle" (click)="onClearClick($event)"
                         class="{$isFocused ? 'primary-text' : null} theme-light" />
                 </div>
+                <div if="$appendIcon" class="input-icon input-icon-append">
+                    <Icon name="$appendIcon" class="theme-light" />
+                </div>
             </div>
         </div>
-        <div class="text-field-details">
+        <div if="showDetails()" class="text-field-details">
             <div class="viewi-messages" class.error-text="$hasValidationMessages">
                 <div class="messages-wrapper">
                     <div if="hasMessages()" foreach="getMessages() as $message" class="messages-message">$message</div>
@@ -30,6 +44,11 @@
             </div>
             <div if="$counter" class="viewi-counter theme-light" class.error-text="$hasValidationMessages">
                 {getCurrentCount()} / $counter</div>
+        </div>
+    </div>
+    <div if="$appendOuterIcon" class="input-append-outer">
+        <div class="input-icon input-icon-append-outer">
+            <Icon name="$appendOuterIcon" class="theme-light" />
         </div>
     </div>
 </div>

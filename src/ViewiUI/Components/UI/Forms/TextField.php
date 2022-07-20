@@ -12,12 +12,22 @@ class TextField extends BaseComponent
     public ?string $uid = null;
     public ?string $id = null;
     public string $label = '';
+    public string $type = 'text';
     public ?string $placeholder = null;
     public bool $isFocused = false;
     public bool $solo = false;
     public bool $filled = false;
     public bool $outlined = false;
     public bool $booted = false;
+    public bool $dense = false;
+    public bool $rounded = false;
+    public bool $disabled = false;
+    public bool $readonly = false;
+    /**
+     * 
+     * @var bool|'auto'
+     */
+    public $hideDetails = false;
     public bool $hasValue = false;
     public ?string $hint = null;
     public bool $persistentHint = false;
@@ -36,6 +46,10 @@ class TextField extends BaseComponent
     public ?array $rules = null;
     public array $validationMessages = [];
     public bool $hasValidationMessages = false;
+    public ?string $prependIcon = null;
+    public ?string $prependInnerIcon = null;
+    public ?string $appendIcon = null;
+    public ?string $appendOuterIcon = null;
 
     function __mounted()
     {
@@ -56,12 +70,22 @@ class TextField extends BaseComponent
         $classes .= $this->isEnclosed() ? ' text-field-enclosed' : '';
         $classes .= $this->filled ? ' text-field-filled' : '';
         $classes .= $this->outlined ? ' text-field-outlined' : '';
+        $classes .= $this->dense ? ' input-dense' : '';
+        $classes .= $this->rounded ? ' text-field-rounded' : '';
         return $classes;
     }
 
     function isEnclosed(): bool
     {
         return $this->solo || $this->filled || $this->outlined;
+    }
+
+    function showDetails(): bool
+    {
+        if ($this->hideDetails === 'auto') {
+            return $this->hasMessages();
+        }
+        return !$this->hideDetails;
     }
 
     function hasHint(): bool
