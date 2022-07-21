@@ -21,6 +21,7 @@ class TextField extends BaseComponent
     public bool $booted = false;
     public bool $dense = false;
     public bool $rounded = false;
+    public bool $shaped = false;
     public bool $disabled = false;
     public bool $readonly = false;
     /**
@@ -50,6 +51,8 @@ class TextField extends BaseComponent
     public ?string $prependInnerIcon = null;
     public ?string $appendIcon = null;
     public ?string $appendOuterIcon = null;
+    public ?string $prefix = null;
+    public ?string $suffix = null;
 
     function __mounted()
     {
@@ -72,6 +75,7 @@ class TextField extends BaseComponent
         $classes .= $this->outlined ? ' text-field-outlined' : '';
         $classes .= $this->dense ? ' input-dense' : '';
         $classes .= $this->rounded ? ' text-field-rounded' : '';
+        $classes .= $this->shaped ? ' text-field-shaped' : '';
         return $classes;
     }
 

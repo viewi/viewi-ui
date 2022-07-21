@@ -22,9 +22,11 @@
                 <label if="!$solo || (!$hasValue && !$isFocused)" for="{getId()}" class="viewi-label"
                     class.label-active="$isFocused || $hasValue" class.primary-text="$isFocused"
                     class.error-text="$hasValidationMessages">$label</label>
+                <div if="$prefix" class="text-field-prefix">$prefix</div>
                 <input #input id="{getId()}" type="$type" placeholder="{$isFocused ? $placeholder : null}"
                     disabled="$disabled" readonly="$readonly" (focus)="onFocus($event)" (blur)="onBlur($event)"
                     (input)="onInput($event)" (keydown)="onKeyDown($event)" model="$value" value="$value" />
+                <div if="$suffix" class="text-field-suffix">$suffix</div>
             </div>
             <div if="$appendIcon || ($clearable && $hasValue)" class="input-append-inner">
                 <div if="$clearable && $hasValue" class="input-icon input-icon-clear">
