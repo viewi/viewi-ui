@@ -1,0 +1,168 @@
+.viewi-textarea.text-field-solo-inverted.input-is-focused textarea {
+    color: #fff
+}
+
+.viewi-textarea.text-field-solo-inverted.input-is-focused textarea::-moz-placeholder {
+    color: hsla(0, 0%, 100%, .5)
+}
+
+.viewi-textarea.text-field-solo-inverted.input-is-focused textarea:-ms-input-placeholder {
+    color: hsla(0, 0%, 100%, .5)
+}
+
+.viewi-textarea.text-field-solo-inverted.input-is-focused textarea::placeholder {
+    color: hsla(0, 0%, 100%, .5)
+}
+
+.theme-dark.viewi-textarea.text-field-solo-inverted.input-is-focused textarea {
+    color: rgba(0, 0, 0, .87)
+}
+
+.theme-dark.viewi-textarea.text-field-solo-inverted.input-is-focused textarea::-moz-placeholder {
+    color: rgba(0, 0, 0, .38)
+}
+
+.theme-dark.viewi-textarea.text-field-solo-inverted.input-is-focused textarea:-ms-input-placeholder {
+    color: rgba(0, 0, 0, .38)
+}
+
+.theme-dark.viewi-textarea.text-field-solo-inverted.input-is-focused textarea::placeholder {
+    color: rgba(0, 0, 0, .38)
+}
+
+.viewi-textarea textarea {
+    align-self: stretch;
+    flex: 1 1 auto;
+    line-height: 1.75rem;
+    max-width: 100%;
+    min-height: 32px;
+    outline: none;
+    padding: 0;
+    width: 100%
+}
+
+.viewi-textarea .text-field-prefix,
+.viewi-textarea .text-field-suffix {
+    padding-top: 2px;
+    align-self: start
+}
+
+.viewi-textarea.text-field-box .text-field-prefix,
+.viewi-textarea.text-field-box textarea,
+.viewi-textarea.text-field-enclosed .text-field-prefix,
+.viewi-textarea.text-field-enclosed textarea {
+    margin-top: 24px
+}
+
+.viewi-textarea.text-field-box.text-field-outlined:not(.input-dense) .text-field-prefix,
+.viewi-textarea.text-field-box.text-field-outlined:not(.input-dense) .text-field-suffix,
+.viewi-textarea.text-field-box.text-field-outlined:not(.input-dense) textarea,
+.viewi-textarea.text-field-box.text-field-single-line:not(.input-dense) .text-field-prefix,
+.viewi-textarea.text-field-box.text-field-single-line:not(.input-dense) .text-field-suffix,
+.viewi-textarea.text-field-box.text-field-single-line:not(.input-dense) textarea,
+.viewi-textarea.text-field-enclosed.text-field-outlined:not(.input-dense) .text-field-prefix,
+.viewi-textarea.text-field-enclosed.text-field-outlined:not(.input-dense) .text-field-suffix,
+.viewi-textarea.text-field-enclosed.text-field-outlined:not(.input-dense) textarea,
+.viewi-textarea.text-field-enclosed.text-field-single-line:not(.input-dense) .text-field-prefix,
+.viewi-textarea.text-field-enclosed.text-field-single-line:not(.input-dense) .text-field-suffix,
+.viewi-textarea.text-field-enclosed.text-field-single-line:not(.input-dense) textarea {
+    margin-top: 10px
+}
+
+.viewi-textarea.text-field-box.text-field-outlined:not(.input-dense) .viewi-label,
+.viewi-textarea.text-field-box.text-field-single-line:not(.input-dense) .viewi-label,
+.viewi-textarea.text-field-enclosed.text-field-outlined:not(.input-dense) .viewi-label,
+.viewi-textarea.text-field-enclosed.text-field-single-line:not(.input-dense) .viewi-label {
+    top: 18px
+}
+
+.viewi-textarea.text-field-box.text-field-outlined.input-dense .text-field-prefix,
+.viewi-textarea.text-field-box.text-field-outlined.input-dense .text-field-suffix,
+.viewi-textarea.text-field-box.text-field-outlined.input-dense textarea,
+.viewi-textarea.text-field-box.text-field-single-line.input-dense .text-field-prefix,
+.viewi-textarea.text-field-box.text-field-single-line.input-dense .text-field-suffix,
+.viewi-textarea.text-field-box.text-field-single-line.input-dense textarea,
+.viewi-textarea.text-field-enclosed.text-field-outlined.input-dense .text-field-prefix,
+.viewi-textarea.text-field-enclosed.text-field-outlined.input-dense .text-field-suffix,
+.viewi-textarea.text-field-enclosed.text-field-outlined.input-dense textarea,
+.viewi-textarea.text-field-enclosed.text-field-single-line.input-dense .text-field-prefix,
+.viewi-textarea.text-field-enclosed.text-field-single-line.input-dense .text-field-suffix,
+.viewi-textarea.text-field-enclosed.text-field-single-line.input-dense textarea {
+    margin-top: 6px
+}
+
+.viewi-textarea.text-field-box.text-field-outlined.input-dense .input-append-inner,
+.viewi-textarea.text-field-box.text-field-outlined.input-dense .input-append-outer,
+.viewi-textarea.text-field-box.text-field-outlined.input-dense .input-prepend-inner,
+.viewi-textarea.text-field-box.text-field-outlined.input-dense .input-prepend-outer,
+.viewi-textarea.text-field-box.text-field-single-line.input-dense .input-append-inner,
+.viewi-textarea.text-field-box.text-field-single-line.input-dense .input-append-outer,
+.viewi-textarea.text-field-box.text-field-single-line.input-dense .input-prepend-inner,
+.viewi-textarea.text-field-box.text-field-single-line.input-dense .input-prepend-outer,
+.viewi-textarea.text-field-enclosed.text-field-outlined.input-dense .input-append-inner,
+.viewi-textarea.text-field-enclosed.text-field-outlined.input-dense .input-append-outer,
+.viewi-textarea.text-field-enclosed.text-field-outlined.input-dense .input-prepend-inner,
+.viewi-textarea.text-field-enclosed.text-field-outlined.input-dense .input-prepend-outer,
+.viewi-textarea.text-field-enclosed.text-field-single-line.input-dense .input-append-inner,
+.viewi-textarea.text-field-enclosed.text-field-single-line.input-dense .input-append-outer,
+.viewi-textarea.text-field-enclosed.text-field-single-line.input-dense .input-prepend-inner,
+.viewi-textarea.text-field-enclosed.text-field-single-line.input-dense .input-prepend-outer {
+    align-self: flex-start;
+    margin-top: 8px
+}
+
+.viewi-textarea.text-field-solo {
+    align-items: flex-start
+}
+
+.viewi-textarea.text-field-solo .input-control textarea {
+    caret-color: auto
+}
+
+.viewi-textarea.text-field-solo .input-append-inner,
+.viewi-textarea.text-field-solo .input-append-outer,
+.viewi-textarea.text-field-solo .input-prepend-inner,
+.viewi-textarea.text-field-solo .input-prepend-outer {
+    align-self: flex-start;
+    margin-top: 12px
+}
+
+.is-ltr .viewi-textarea.text-field-solo .input-append-inner {
+    padding-left: 12px
+}
+
+.is-rtl .viewi-textarea.text-field-solo .input-append-inner {
+    padding-right: 12px
+}
+
+.textarea-auto-grow textarea {
+    overflow: hidden
+}
+
+.textarea-no-resize textarea {
+    resize: none
+}
+
+.viewi-textarea.text-field-enclosed .text-field-slot {
+    align-self: stretch
+}
+
+.is-ltr .viewi-textarea.text-field-enclosed .text-field-slot {
+    margin-right: -12px
+}
+
+.is-rtl .viewi-textarea.text-field-enclosed .text-field-slot {
+    margin-left: -12px
+}
+
+.is-ltr .viewi-textarea.text-field-enclosed .text-field-slot textarea {
+    padding-right: 12px
+}
+
+.is-rtl .viewi-textarea.text-field-enclosed .text-field-slot textarea {
+    padding-left: 12px
+}
+
+.viewi-textarea.text-field-solo .viewi-label {
+    top: 18px;
+}
