@@ -12,6 +12,7 @@ class TextField extends BaseComponent
     public ?string $uid = null;
     public ?string $id = null;
     public string $label = '';
+    public ?string $autocomplete = null;
     public string $type = 'text';
     public ?string $placeholder = null;
     public bool $isFocused = false;
@@ -34,7 +35,11 @@ class TextField extends BaseComponent
     public bool $persistentHint = false;
     public bool $clearable = false;
     public array $messages = [];
-    public ?int $counter = null;
+    /**
+     * 
+     * @var null|int|true
+     */
+    public $counter = null;
     /**
      * 
      * @var callable
@@ -53,12 +58,27 @@ class TextField extends BaseComponent
     public ?string $appendOuterIcon = null;
     public ?string $prefix = null;
     public ?string $suffix = null;
+    public bool $singleLine = false;
+    public bool $fullWidth = false;
+    // textarea
+    public bool $textarea = false;
+    public int $rows = 5;
+    public bool $noResize = false;
+    public bool $autoGrow = false;
+    public float $rowHeight = 28;
 
     function __mounted()
     {
         $this->booted = true;
         $this->uid = $this->__id;
         $this->hasValue = !!$this->value;
+    }
+
+    function __rendered()
+    {
+        if ($this->autoGrow) {
+            $this->calculateInputHeight();
+        }
     }
 
     function getId(): string
@@ -71,17 +91,32 @@ class TextField extends BaseComponent
         $classes = 'viewi-input text-field';
         $classes .= $this->solo ? ' text-field-solo' : '';
         $classes .= $this->isEnclosed() ? ' text-field-enclosed' : '';
+        $classes .= $this->isSingle() ? ' text-field-single-line' : '';
         $classes .= $this->filled ? ' text-field-filled' : '';
         $classes .= $this->outlined ? ' text-field-outlined' : '';
         $classes .= $this->dense ? ' input-dense' : '';
         $classes .= $this->rounded ? ' text-field-rounded' : '';
         $classes .= $this->shaped ? ' text-field-shaped' : '';
+        $classes .= $this->prependInnerIcon ? ' field-has-prepend' : '';
+        $classes .= $this->textarea ? ' viewi-textarea' : '';
+        $classes .= $this->noResize ? ' textarea-no-resize' : '';
+        $classes .= $this->autoGrow ? ' textarea-auto-grow' : '';
+        $classes .= $this->autoGrow || $this->noResize ? ' textarea-no-resize' : '';
         return $classes;
     }
 
     function isEnclosed(): bool
     {
         return $this->solo || $this->filled || $this->outlined;
+    }
+
+    function isSingle(): bool
+    {
+        return ($this->solo ||
+            $this->singleLine ||
+            $this->fullWidth ||
+            ($this->filled && $this->label === '')
+        );
     }
 
     function showDetails(): bool
@@ -139,6 +174,19 @@ class TextField extends BaseComponent
         ClientTimer::setTimeoutStatic($this->validate, 0);
     }
 
+    // textarea
+
+    function calculateInputHeight()
+    {
+        $input = $this->_refs['input'] ?? false;
+        if (!$input) return;
+
+        $input->style->height = '0';
+        $height = $input->scrollHeight;
+        $minHeight = intval($this->rows, 10) * floatval($this->rowHeight);
+        $input->style->height = max($minHeight, $height) . 'px';
+    }
+
     // EVENTS
     function onKeyDown(DOMEvent $event)
     {
@@ -166,6 +214,8 @@ class TextField extends BaseComponent
         $this->hasValue = !!$event->target->value;
         $this->emitEvent('input', $event);
         $this->postValidate();
+        if ($this->autoGrow)
+            $this->calculateInputHeight();
     }
 
     function onFocus($event)

@@ -23,9 +23,14 @@
                     class.label-active="$isFocused || $hasValue" class.primary-text="$isFocused"
                     class.error-text="$hasValidationMessages">$label</label>
                 <div if="$prefix" class="text-field-prefix">$prefix</div>
-                <input #input id="{getId()}" type="$type" placeholder="{$isFocused ? $placeholder : null}"
+                <textarea if="$textarea" #input id="{getId()}" placeholder="{$isFocused ? $placeholder : null}"
                     disabled="$disabled" readonly="$readonly" (focus)="onFocus($event)" (blur)="onBlur($event)"
-                    (input)="onInput($event)" (keydown)="onKeyDown($event)" model="$value" value="$value" />
+                    (input)="onInput($event)" (keydown)="onKeyDown($event)" model="$value" rows="$rows"
+                    autocomplete="$autocomplete"></textarea>
+                <input else #input id="{getId()}" type="$type" placeholder="{$isFocused ? $placeholder : null}"
+                    disabled="$disabled" readonly="$readonly" (focus)="onFocus($event)" (blur)="onBlur($event)"
+                    (input)="onInput($event)" (keydown)="onKeyDown($event)" model="$value" value="$value"
+                    autocomplete="$autocomplete" />
                 <div if="$suffix" class="text-field-suffix">$suffix</div>
             </div>
             <div if="$appendIcon || ($clearable && $hasValue)" class="input-append-inner">
@@ -45,7 +50,7 @@
                 </div>
             </div>
             <div if="$counter" class="viewi-counter theme-light" class.error-text="$hasValidationMessages">
-                {getCurrentCount()} / $counter</div>
+                {getCurrentCount()} <template if="$counter !== true"> / $counter</template></div>
         </div>
     </div>
     <div if="$appendOuterIcon" class="input-append-outer">
