@@ -706,6 +706,10 @@
     position: absolute;
 }
 
+.text-field.field-has-prepend.input-is-label-active.text-field-outlined .viewi-label {
+    left: -28px;
+}
+
 .text-field>.input-control>.input-slot:before {
     border-color: rgba(0, 0, 0, .42)
 }
