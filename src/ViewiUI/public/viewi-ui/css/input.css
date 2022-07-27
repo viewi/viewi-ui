@@ -231,3 +231,148 @@
 .input-is-label-active .legend-ghost {
     width: auto;
 }
+
+.input-checkbox.input-indeterminate.input-is-disabled {
+    opacity: .6
+}
+
+.input-checkbox.input-dense {
+    margin-top: 4px
+}
+
+.input-selection-controls {
+    margin-top: 16px;
+    padding-top: 4px
+}
+
+.input-selection-controls>.input-append-outer,
+.input-selection-controls>.input-prepend-outer {
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+.input-selection-controls:not(.input-hide-details)>.input-slot {
+    margin-bottom: 12px
+}
+
+.input-selection-controls .input-slot,
+.input-selection-controls .radio {
+    cursor: pointer
+}
+
+.input-selection-controls .input-slot>.viewi-label,
+.input-selection-controls .radio>.viewi-label {
+    align-items: center;
+    display: inline-flex;
+    flex: 1 1 auto;
+    height: auto
+}
+
+.input-selection-controls-input {
+    color: inherit;
+    display: inline-flex;
+    flex: 0 0 auto;
+    height: 24px;
+    position: relative;
+    transition: .3s cubic-bezier(.25, .8, .5, 1);
+    transition-property: transform;
+    width: 24px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.input-selection-controls-input .icon {
+    width: 100%
+}
+
+.is-ltr .input-selection-controls-input {
+    margin-right: 8px
+}
+
+.is-rtl .input-selection-controls-input {
+    margin-left: 8px
+}
+
+.input-selection-controls-input input[role=checkbox],
+.input-selection-controls-input input[role=radio],
+.input-selection-controls-input input[role=switch] {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.input-selection-controls-input+.viewi-label {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.input-selection-controls-ripple {
+    border-radius: 50%;
+    cursor: pointer;
+    height: 34px;
+    position: absolute;
+    transition: inherit;
+    width: 34px;
+    left: -12px;
+    top: calc(50% - 24px);
+    margin: 7px
+}
+
+.input-selection-controls-ripple:before {
+    border-radius: inherit;
+    bottom: 0;
+    content: "";
+    position: absolute;
+    opacity: .2;
+    left: 0;
+    right: 0;
+    top: 0;
+    transform-origin: center center;
+    transform: scale(.2);
+    transition: inherit
+}
+
+.input-selection-controls-ripple>.ripple-container {
+    transform: scale(1.2)
+}
+
+.input-selection-controls.input-dense .input-selection-controls-ripple {
+    width: 28px;
+    height: 28px;
+    left: -9px
+}
+
+.input-selection-controls.input-dense:not(.input-switch) .input-selection-controls-ripple {
+    top: calc(50% - 21px)
+}
+
+.input-selection-controls.input {
+    flex: 0 1 auto
+}
+
+.input-selection-controls.input-is-focused .input-selection-controls-ripple:before,
+.input-selection-controls .radio-is-focused .input-selection-controls-ripple:before {
+    background: currentColor;
+    transform: scale(1.2)
+}
+
+.input-selection-controls.input-is-disabled:not(.input-indeterminate) .icon {
+    color: inherit
+}
+
+.input-selection-controls-input:hover .input-selection-controls-ripple:before {
+    background: currentColor;
+    transform: scale(1.2);
+    transition: none
+}
