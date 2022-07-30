@@ -1,6 +1,4 @@
-<div class="{getClasses()}" class.primary-text="$isFocused" class.input-is-label-active="$isFocused || $hasValue"
-    class.input-is-focused="$isFocused" class.text-field-is-booted="$booted" class.error-text="$hasValidationMessages"
-    class.input-has-state="$hasValidationMessages" class.input-is-disabled="$disabled"
+<div class="{getClasses()}" class.input-has-state="$hasValidationMessages" class.input-is-disabled="$disabled"
     class.input-is-readonly="$readonly" class.input-hide-details="!showDetails()">
     <div class="input-control">
         <div class="input-slot" (click)="onClick($event)" (mousedown)="onMouseDown($event)">
@@ -8,9 +6,8 @@
                 <Icon name="{isChecked() ? 'mdi-checkbox-marked' : 'mdi-checkbox-blank-outline'}" class="theme-light"
                     color="{!$disabled && isChecked() ? $color : null}" />
                 <input aria-checked="{isChecked()}" role="checkbox" #input id="{getId()}" type="$type"
-                    disabled="$disabled" readonly="$readonly" checked="{isChecked()}" (focus)="onFocus($event)"
-                    (blur)="onBlur($event)" (change)="onChange($event)" (keydown)="onKeyDown($event)"
-                    model="$modelValue" value="$value">
+                    disabled="$disabled" readonly="$readonly" checked="{isChecked()}" (change)="onChange($event)"
+                    (keydown)="onKeyDown($event)" model="$modelValue" value="$value">
                 <div class="input-selection-controls-ripple"></div>
             </div>
             <label for="{getId()}" class="viewi-label" class.error-text="$hasValidationMessages">$label</label>

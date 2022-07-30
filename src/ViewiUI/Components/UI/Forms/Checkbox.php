@@ -14,11 +14,7 @@ class Checkbox extends BaseComponent
     public ?string $id = null;
     public string $label = '';
     public string $color = 'primary';
-    public ?string $autocomplete = null;
     public string $type = 'checkbox';
-    public ?string $placeholder = null;
-    public bool $isFocused = false;
-    public bool $booted = false;
     public bool $dense = false;
     public bool $disabled = false;
     public bool $readonly = false;
@@ -28,8 +24,6 @@ class Checkbox extends BaseComponent
      */
     public $hideDetails = false;
     public bool $hasValue = false;
-    public ?string $hint = null;
-    public bool $persistentHint = false;
     public array $messages = [];
     /**
      * 
@@ -72,18 +66,8 @@ class Checkbox extends BaseComponent
         return !$this->hideDetails;
     }
 
-    function hasHint(): bool
-    {
-        return !$this->hasValidationMessages &&
-            !!$this->hint &&
-            ($this->persistentHint || $this->isFocused);
-    }
-
     function getMessages(): array
     {
-        if ($this->hasHint()) {
-            return [$this->hint];
-        }
         if ($this->hasValidationMessages) {
             return $this->validationMessages;
         }
@@ -150,19 +134,6 @@ class Checkbox extends BaseComponent
     function onChange(DOMEvent $event)
     {
         $this->emitEvent('change', $event);
-        $this->postValidate();
-    }
-
-    function onFocus($event)
-    {
-        $this->isFocused = true;
-        $this->emitEvent('focus', $event);
-    }
-
-    function onBlur($event)
-    {
-        $this->isFocused = false;
-        $this->emitEvent('blur', $event);
         $this->postValidate();
     }
 }
