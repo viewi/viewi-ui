@@ -1,0 +1,24 @@
+<div class="{getClasses()} {getColor()}" class.input-has-state="$hasValidationMessages"
+    class.input-is-disabled="$disabled" class.input-is-readonly="$readonly" class.input-hide-details="!showDetails()"
+    class.input-is-dirty="{isChecked()}">
+    <div class="input-control">
+        <div class="input-slot" (click)="onClick($event)" (mousedown)="onMouseDown($event)">
+            <div class="input-selection-controls-input">
+                <input aria-checked="{isChecked()}" role="switch" #input id="{getId()}" type="$type"
+                    disabled="$disabled" readonly="$readonly" checked="{isChecked()}" (change)="onChange($event)"
+                    (keydown)="onKeyDown($event)" model="$modelValue" value="$value">
+
+                <div class="input-switch-track theme-light {getColor()}"></div>
+                <div class="input-switch-thumb theme-light {getColor()}"></div>
+            </div>
+            <label for="{getId()}" class="viewi-label" class.error-text="$hasValidationMessages">$label</label>
+        </div>
+        <div if="showDetails()" class="text-field-details">
+            <div class="viewi-messages" class.error-text="$hasValidationMessages">
+                <div class="messages-wrapper">
+                    <div if="hasMessages()" foreach="getMessages() as $message" class="messages-message">$message</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
