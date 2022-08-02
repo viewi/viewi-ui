@@ -48,6 +48,7 @@ class Btn extends BaseComponent
      * @var bool
      */
     public bool $loading = false;
+    public bool $dark = false;
 
     function __mounted()
     {
@@ -83,6 +84,7 @@ class Btn extends BaseComponent
         $classes .= $this->bottom ? ' pos-bottom' : '';
         $classes .= $this->icon ? ' icon' : '';
         $classes .= $this->loading ? ' button-loading' : '';
+        $classes .= $this->dark ? ' theme-dark' : ' theme-light';
         $classes .= isset($this->_props['class']) ? ' ' . $this->_props['class'] : '';
         return $classes;
     }
