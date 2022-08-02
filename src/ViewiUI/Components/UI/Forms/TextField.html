@@ -1,5 +1,6 @@
-<div class="{getClasses()}" class.primary-text="$isFocused" class.input-is-label-active="$isFocused || $hasValue"
-    class.input-is-focused="$isFocused" class.text-field-is-booted="$booted" class.error-text="$hasValidationMessages"
+<div class="{getClasses()}" class.primary-text="$isFocused"
+    class.input-is-label-active="$isFocused || $select || $hasValue" class.input-is-focused="$isFocused"
+    class.text-field-is-booted="$booted" class.error-text="$hasValidationMessages"
     class.input-has-state="$hasValidationMessages" class.input-is-disabled="$disabled"
     class.input-is-readonly="$readonly" class.input-hide-details="!showDetails()">
     <div if="$prependIcon" class="input-prepend-outer">
@@ -15,18 +16,24 @@
                 </div>
             </div>
             <fieldset if="$outlined" aria-hidden="true">
-                <legend class="legend-ghost"><span class="notranslate label-ghost">{{ $isFocused || $hasValue ? $label :
+                <legend class="legend-ghost"><span class="notranslate label-ghost">{{ $isFocused || $select || $hasValue
+                        ? $label :
                         '&#8203;' }}</span></legend>
             </fieldset>
             <div class="text-field-slot">
-                <label if="!$solo || (!$hasValue && !$isFocused)" for="{getId()}" class="viewi-label"
-                    class.label-active="$isFocused || $hasValue" class.primary-text="$isFocused"
+                <label if="!$solo || (!$hasValue && !$isFocused && !$select)" for="{getId()}" class="viewi-label"
+                    class.label-active="$isFocused || $select || $hasValue" class.primary-text="$isFocused"
                     class.error-text="$hasValidationMessages">$label</label>
                 <div if="$prefix" class="text-field-prefix">$prefix</div>
                 <textarea if="$textarea" #input id="{getId()}" placeholder="{$isFocused ? $placeholder : null}"
                     disabled="$disabled" readonly="$readonly" (focus)="onFocus($event)" (blur)="onBlur($event)"
                     (input)="onInput($event)" (keydown)="onKeyDown($event)" model="$value" rows="$rows"
                     autocomplete="$autocomplete"></textarea>
+                <select else-if="$select" #input id="{getId()}" placeholder="{$isFocused ? $placeholder : null}"
+                    disabled="$disabled" readonly="$readonly" (focus)="onFocus($event)" (blur)="onBlur($event)"
+                    (input)="onInput($event)" (keydown)="onKeyDown($event)" model="$value" value="$value">
+                    <option foreach="$items as $item">$item</option>
+                </select>
                 <input else #input id="{getId()}" type="$type" placeholder="{$isFocused ? $placeholder : null}"
                     disabled="$disabled" readonly="$readonly" (focus)="onFocus($event)" (blur)="onBlur($event)"
                     (input)="onInput($event)" (keydown)="onKeyDown($event)" model="$value" value="$value"

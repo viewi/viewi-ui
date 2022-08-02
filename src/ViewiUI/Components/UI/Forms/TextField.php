@@ -66,6 +66,9 @@ class TextField extends BaseComponent
     public bool $noResize = false;
     public bool $autoGrow = false;
     public float $rowHeight = 28;
+    // select
+    public bool $select = false;
+    public ?array $items = null;
 
     function __mounted()
     {
