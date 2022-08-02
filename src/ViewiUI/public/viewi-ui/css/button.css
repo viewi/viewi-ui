@@ -56,8 +56,94 @@
     transition-property: opacity
 }
 
-.button-content .viewi-icon.viewi-icon.pos--left,
-.button-content .viewi-icon.viewi-icon.pos--right {
+.theme-light.viewi-button {
+    color: rgba(0, 0, 0, .87)
+}
+
+.theme-light.viewi-button.button-disabled,
+.theme-light.viewi-button.button-disabled .button-loading,
+.theme-light.viewi-button.button-disabled .v-icon {
+    color: rgba(0, 0, 0, .26) !important
+}
+
+.theme-light.viewi-button.button-disabled.button-has-bg {
+    background-color: rgba(0, 0, 0, .12) !important
+}
+
+.theme-light.viewi-button.button-has-bg {
+    background-color: #f5f5f5
+}
+
+.theme-light.viewi-button.button-outlined.button-text {
+    border-color: rgba(0, 0, 0, .12)
+}
+
+.theme-light.viewi-button.icon {
+    color: rgba(0, 0, 0, .54)
+}
+
+.theme-light.viewi-button:hover:before {
+    opacity: .08
+}
+
+.theme-light.viewi-button:focus:before {
+    opacity: .24
+}
+
+.theme-light.button-active:before,
+.theme-light.button-active:hover:before {
+    opacity: .18
+}
+
+.theme-light.button-active:focus:before {
+    opacity: .16
+}
+
+.theme-dark.viewi-button {
+    color: #fff
+}
+
+.theme-dark.viewi-button.button-disabled,
+.theme-dark.viewi-button.button-disabled .button-loading,
+.theme-dark.viewi-button.button-disabled .v-icon {
+    color: hsla(0, 0%, 100%, .3) !important
+}
+
+.theme-dark.viewi-button.button-disabled.button-has-bg {
+    background-color: hsla(0, 0%, 100%, .12) !important
+}
+
+.theme-dark.viewi-button.button-has-bg {
+    background-color: #272727
+}
+
+.theme-dark.viewi-button.button-outlined.button-text {
+    border-color: hsla(0, 0%, 100%, .12)
+}
+
+.theme-dark.viewi-button.icon {
+    color: #fff
+}
+
+.theme-dark.viewi-button:hover:before {
+    opacity: .08
+}
+
+.theme-dark.viewi-button:focus:before {
+    opacity: .24
+}
+
+.theme-dark.button-active:before,
+.theme-dark.button-active:hover:before {
+    opacity: .18
+}
+
+.theme-dark.button-active:focus:before {
+    opacity: .32
+}
+
+.button-content .viewi-icon.viewi-icon.pos-left,
+.button-content .viewi-icon.viewi-icon.pos-right {
     font-size: 18px;
     height: 18px;
     width: 18px
@@ -118,31 +204,31 @@
     max-width: auto;
 }
 
-.viewi-button-absolute {
+.button-absolute {
     position: absolute
 }
 
-.viewi-button-fixed {
+.button-fixed {
     position: fixed
 }
 
-.viewi-button-absolute.pos-right,
-.viewi-button-fixed.pos-right {
+.button-absolute.pos-right,
+.button-fixed.pos-right {
     right: 16px
 }
 
-.viewi-button-absolute.pos-left,
-.viewi-button-fixed.pos-left {
+.button-absolute.pos-left,
+.button-fixed.pos-left {
     left: 16px
 }
 
-.viewi-button-absolute.pos-top,
-.viewi-button-fixed.pos-top {
+.button-absolute.pos-top,
+.button-fixed.pos-top {
     top: 16px
 }
 
-.viewi-button-absolute.pos-bottom,
-.viewi-button-fixed.pos-bottom {
+.button-absolute.pos-bottom,
+.button-fixed.pos-bottom {
     bottom: 16px
 }
 
