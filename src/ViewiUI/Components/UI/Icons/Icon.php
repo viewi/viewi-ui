@@ -19,6 +19,7 @@ class Icon extends BaseComponent
     public string $size = '';
     public ?string $position = null;
     public ?string $class = null;
+    public bool $dark = false;
 
     function __mounted()
     {
@@ -39,7 +40,8 @@ class Icon extends BaseComponent
         $classes .= $this->dense ? ' viewi-icon-dense' : '';
         $classes .= $this->disabled ? ' viewi-icon-disabled' : '';
         $classes .= $this->clickable() ? ' viewi-icon-link' : '';
-        $classes .= $this->class !== null ? ' ' . $this->class : '';
+        $classes .= $this->class !== null ? ' ' . $this->class : '';        
+        $classes .= $this->dark ? ' theme-dark' : ' theme-light';
         return $classes;
     }
 
