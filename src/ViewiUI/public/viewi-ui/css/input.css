@@ -376,3 +376,14 @@
     transform: scale(1.2);
     transition: none
 }
+
+.viewi-input select {
+    width: 100%;
+    -moz-appearance: auto;
+    -webkit-appearance: auto;
+    cursor: pointer;
+}
+
+.text-field-filled select {
+    padding-top: 16px;
+}
