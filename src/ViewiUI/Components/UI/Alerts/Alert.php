@@ -43,7 +43,7 @@ class Alert extends BaseComponent
         $classes .= $this->prominent ? ' alert-prominent' : '';
         $classes .= $this->text ? ' alert-text' : '';
         $classes .= (!$this->coloredBorder || !$this->hasBorder()) && $this->type ? ' ' . $this->type . ($this->outlined || $this->text ? '-text' : '') : '';
-        $classes .= $this->elevation > 0 ? ' elevation-' . $this->elevation : '';
+        $classes .= $this->elevation > 0 ? ' sheet-elevated elevation-' . $this->elevation : '';
         $classes .= $this->shaped ? ' sheet-shaped' : '';
         $classes .= $this->tile ? ' sheet-tile' : '';
         $classes .= $this->border !== null ? ' alert-bordered alert-bordered-' . $this->border : '';
