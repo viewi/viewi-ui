@@ -32,6 +32,7 @@ class Toolbar extends BaseComponent
     public bool $flat = false;
     public bool $floating = false;
     public bool $prominent = false;
+    public ?string $color = null;
 
     private function roundedClasses()
     {
@@ -69,9 +70,10 @@ class Toolbar extends BaseComponent
             . ($this->extended ? ' toolbar-extended' : '')
             . ($this->flat ? ' toolbar-flat' : '')
             . ($this->floating ? ' toolbar-floating' : '')
-            . ($this->prominent ? ' toolbar-prominent' : '');
+            . ($this->prominent ? ' toolbar-prominent' : '')
+            . ($this->color != null ? ' ' . $this->color : '');
     }
-    
+
     public function getWrapperHeight()
     {
         if ($this->prominent) {
