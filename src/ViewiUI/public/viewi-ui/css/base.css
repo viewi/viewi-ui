@@ -160,12 +160,6 @@
     line-height: 1.5;
 }
 
-.primary {
-    background-color: #1867c0 !important;
-    border-color: #1867c0 !important;
-    color: #FFF;
-}
-
 a {
     color: #1867c0;
 }
@@ -183,7 +177,7 @@ a {
 .primary {
     background-color: #1867c0 !important;
     border-color: #1867c0 !important;
-    color: #FFF;
+    color: #FFF !important;
 }
 
 .primary-text {
@@ -194,7 +188,7 @@ a {
 .secondary {
     background-color: #5cbbf6 !important;
     border-color: #5cbbf6 !important;
-    color: #FFF;
+    color: #FFF !important;
 }
 
 .secondary-text {
@@ -205,7 +199,7 @@ a {
 .accent {
     background-color: #005caf !important;
     border-color: #005caf !important;
-    color: #FFF;
+    color: #FFF !important;
 }
 
 .accent-text {
@@ -216,7 +210,7 @@ a {
 .error {
     background-color: #ff5252 !important;
     border-color: #ff5252 !important;
-    color: #FFF;
+    color: #FFF !important;
 }
 
 .error-text {
@@ -227,7 +221,7 @@ a {
 .info {
     background-color: #2196f3 !important;
     border-color: #2196f3 !important;
-    color: #FFF;
+    color: #FFF !important;
 }
 
 .info-text {
@@ -238,7 +232,7 @@ a {
 .success {
     background-color: #4caf50 !important;
     border-color: #4caf50 !important;
-    color: #FFF;
+    color: #FFF !important;
 }
 
 .success-text {
@@ -249,7 +243,7 @@ a {
 .warning {
     background-color: #fb8c00 !important;
     border-color: #fb8c00 !important;
-    color: #FFF;
+    color: #FFF !important;
 }
 
 .warning-text {
@@ -260,7 +254,7 @@ a {
 .tertiary {
     background-color: #e57373 !important;
     border-color: #e57373 !important;
-    color: #FFF;
+    color: #FFF !important;
 }
 
 .tertiary-text {
