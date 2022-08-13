@@ -1,5 +1,8 @@
-<{getTag()} class="{getClasses()}" style="{getStyles()}" (mouseenter)="onMouseenter()" (mouseleave)="onMouseleave()"
-    (click)="onClick()">
+<div if="{showOverlay()}" class="viewi-overlay overlay-absolute overlay-active">
+    <div class="overlay-scrim"></div>
+</div>
+<{getTag()} #target class="{getClasses()}" style="{getStyles()}" (mouseenter)="onMouseenter()"
+    (mouseleave)="onMouseleave()" (click)="onClick()">
     <div class="navigation-drawer-content">
         <slot></slot>
     </div>

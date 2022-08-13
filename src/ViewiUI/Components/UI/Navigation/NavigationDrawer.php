@@ -24,7 +24,7 @@ class NavigationDrawer extends BaseComponent
     public bool $right = false;
     public bool $temporary = false;
     public bool $dark = false;
-
+    public bool $hideOverlay = false;
     public bool $modelValue = false;
 
     function __rendered()
@@ -53,6 +53,14 @@ class NavigationDrawer extends BaseComponent
     public function isActive()
     {
         return $this->permanent || $this->modelValue;
+    }
+
+    public function showOverlay()
+    {
+        return (!$this->hideOverlay &&
+            $this->isActive() &&
+            ($this->isMobile || $this->temporary)
+        );
     }
 
     public function isMiniVariant()
@@ -126,7 +134,7 @@ class NavigationDrawer extends BaseComponent
     // click outside
     function onClickOutside(DOMEvent $event)
     {
-        if ($this->_element !== $event->target && !$this->_element->contains($event->target)) {
+        if ($this->_refs['target'] !== $event->target && !$this->_refs['target']->contains($event->target)) {
             $this->onOutsideClicked();
         }
     }
