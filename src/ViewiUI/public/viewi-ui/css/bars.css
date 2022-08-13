@@ -23,7 +23,7 @@
     border-radius: 0
 }
 
-.viewi-sheet:not(.sheet-outlined,.sheet-elevated) {
+.viewi-sheet:not(.sheet-outlined, .sheet-elevated) {
     box-shadow: 0 0 0 0 rgba(0, 0, 0, .2), 0 0 0 0 rgba(0, 0, 0, .14), 0 0 0 0 rgba(0, 0, 0, .12)
 }
 
@@ -395,4 +395,55 @@
 .navigation-drawer-is-mobile:not(.navigation-drawer-close),
 .navigation-drawer-temporary:not(.navigation-drawer-close) {
     box-shadow: 0 8px 10px -5px rgba(0, 0, 0, .2), 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12)
+}
+
+.theme-light.viewi-overlay {
+    color: rgba(0, 0, 0, .87)
+}
+
+.theme-dark.viewi-overlay {
+    color: #fff
+}
+
+.viewi-overlay {
+    align-items: center;
+    border-radius: inherit;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    transition: .3s cubic-bezier(.25, .8, .5, 1), z-index 1ms;
+    z-index: 5;
+}
+
+.overlay-content {
+    position: relative
+}
+
+.overlay-scrim {
+    border-radius: inherit;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: inherit;
+    width: 100%;
+    will-change: opacity;
+    opacity: 0.46;
+    background-color: rgb(33, 33, 33);
+    border-color: rgb(33, 33, 33);
+}
+
+.overlay-absolute {
+    position: absolute
+}
+
+.overlay-active {
+    pointer-events: auto
 }
