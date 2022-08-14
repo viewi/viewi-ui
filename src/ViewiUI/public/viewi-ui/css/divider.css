@@ -1,0 +1,50 @@
+.theme-light.viewi-divider {
+    border-color: rgba(0, 0, 0, .12)
+}
+
+.theme-dark.viewi-divider {
+    border-color: hsla(0, 0%, 100%, .12)
+}
+
+.viewi-divider {
+    display: block;
+    flex: 1 1 0px;
+    max-width: 100%;
+    height: 0;
+    max-height: 0;
+    border: solid;
+    border-width: thin 0 0;
+    transition: inherit
+}
+
+.divider-inset:not(.divider-vertical) {
+    max-width: calc(100% - 72px)
+}
+
+.is-ltr .divider-inset:not(.divider-vertical) {
+    margin-left: 72px
+}
+
+.is-rtl .divider-inset:not(.divider-vertical) {
+    margin-right: 72px
+}
+
+.divider-vertical {
+    align-self: stretch;
+    border: solid;
+    border-width: 0 thin 0 0;
+    display: inline-flex;
+    height: inherit;
+    min-height: 100%;
+    max-height: 100%;
+    max-width: 0;
+    width: 0;
+    vertical-align: text-bottom;
+    margin: 0 -1px
+}
+
+.divider-vertical.divider-inset {
+    margin-top: 8px;
+    min-height: 0;
+    max-height: calc(100% - 16px)
+}
