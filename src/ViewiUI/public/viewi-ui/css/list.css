@@ -520,3 +520,113 @@
     padding-top: 0
 }
 
+/** list group **/
+
+.list-group .list-group-header .list-item-icon.list-group-header-append-icon {
+    align-self: center;
+    margin: 0;
+    min-width: 48px;
+    justify-content: flex-end
+}
+
+.list-group-sub-group {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap
+}
+
+.list-group-header.list-item-active:not(:hover):not(:focus):before {
+    opacity: 0
+}
+
+.list-group-items {
+    flex: 1 1 auto
+}
+
+.list-group-items .list-group-items,
+.list-group-items .list-item {
+    overflow: hidden
+}
+
+.list-group-active>.list-group-header.list-group-header-sub-group>.list-group-header-prepend-icon .viewi-icon,
+.list-group-active>.list-group-header>.list-group-header-append-icon .viewi-icon {
+    transform: rotate(-180deg)
+}
+
+.list-group-active>.list-group-header .list-group-header-prepend-icon .viewi-icon,
+.list-group-active>.list-group-header .list-item,
+.list-group-active>.list-group-header .list-item-content {
+    color: inherit
+}
+
+.is-ltr .list-group-sub-group .list-item-action:first-child,
+.is-ltr .list-group-sub-group .list-item-avatar:first-child,
+.is-ltr .list-group-sub-group .list-item-icon:first-child {
+    margin-right: 16px
+}
+
+.is-rtl .list-group-sub-group .list-item-action:first-child,
+.is-rtl .list-group-sub-group .list-item-avatar:first-child,
+.is-rtl .list-group-sub-group .list-item-icon:first-child {
+    margin-left: 16px
+}
+
+.is-ltr .list-group-sub-group .list-group-header {
+    padding-left: 32px
+}
+
+.is-rtl .list-group-sub-group .list-group-header {
+    padding-right: 32px
+}
+
+.is-ltr .list-group-sub-group .list-group-items .list-item {
+    padding-left: 40px
+}
+
+.is-rtl .list-group-sub-group .list-group-items .list-item {
+    padding-right: 40px
+}
+
+.list-group-sub-group.list-group-active .list-item-icon.list-group-header-prepend-icon .viewi-icon {
+    transform: rotate(-180deg)
+}
+
+.is-ltr .list-group-no-action>.list-group-items>.list-item {
+    padding-left: 72px
+}
+
+.is-rtl .list-group-no-action>.list-group-items>.list-item {
+    padding-right: 72px
+}
+
+.is-ltr .list-group-no-action.list-group-sub-group>.list-group-items>.list-item {
+    padding-left: 88px
+}
+
+.is-rtl .list-group-no-action.list-group-sub-group>.list-group-items>.list-item {
+    padding-right: 88px
+}
+
+.is-ltr .list-dense .list-group-sub-group .list-group-header {
+    padding-left: 24px
+}
+
+.is-rtl .list-dense .list-group-sub-group .list-group-header {
+    padding-right: 24px
+}
+
+.is-ltr .list-dense.list-nav .list-group-no-action>.list-group-items>.list-item {
+    padding-left: 64px
+}
+
+.is-rtl .list-dense.list-nav .list-group-no-action>.list-group-items>.list-item {
+    padding-right: 64px
+}
+
+.is-ltr .list-dense.list-nav .list-group-no-action.list-group-sub-group>.list-group-items>.list-item {
+    padding-left: 80px
+}
+
+.is-rtl .list-dense.list-nav .list-group-no-action.list-group-sub-group>.list-group-items>.list-item {
+    padding-right: 80px
+}
