@@ -1,3 +1,21 @@
-<div class="list-group" class.list-group-no-action="$noAction" class.list-group-sub-group="$subGroup">
-    <slot></slot>
+<div class="list-group" class.list-group-no-action="$noAction" class.list-group-sub-group="$subGroup"
+    class.list-group-active="$modelValue">
+    <ListItem link="true" expanded="$modelValue" color="$color" groupHeader="$subGroup" (click)="onToggle()"
+        class="list-group-header">
+        <ListIcon if="$prependIcon">
+            <Icon name="$prependIcon" />
+        </ListIcon>
+        <ListIcon else-if="$subGroup" class="list-group-header-prepend-icon">
+            <Icon name="mdi-menu-down" />
+        </ListIcon>
+        <ListItemContent>
+            <ListItemTitle>{$title ?? ''}</ListItemTitle>
+        </ListItemContent>
+        <ListIcon if="!$subGroup" class="list-group-header-append-icon">
+            <Icon name="mdi-chevron-down" />
+        </ListIcon>
+    </ListItem>
+    <ListGroupItems model="$modelValue">
+        <slot></slot>
+    </ListGroupItems>
 </div>

@@ -1,5 +1,6 @@
 <div tabindex="0" role="{$expanded !== null ? 'button' : 'listitem'}" 
     area-expanded="{$expanded !== null ? ($expanded ? 'true' : 'false') : null}"
-    class="list-item theme-light" class.list-item-link="$link" class.list-group-header="$groupHeader">
+    class="{getClasses()}" class.list-item-link="$link" class.list-group-header="$groupHeader"
+    class.list-item-active="{$expanded || $active}" (click)="onClick($event)">
     <slot></slot>
 </div>
