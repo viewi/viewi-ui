@@ -12,4 +12,11 @@ class ListContainer extends BaseComponent
     public bool $flat = false;
     public bool $rounded = false;
     public bool $shaped = false;
+    public bool $threeLine = false;
+
+    public function getClasses()
+    {
+        return 'viewi-list viewi-sheet theme-light'
+            . ($this->threeLine ? ' list-three-line' : '');
+    }
 }
