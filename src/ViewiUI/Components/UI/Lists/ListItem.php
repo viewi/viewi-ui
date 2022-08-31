@@ -12,6 +12,12 @@ class ListItem extends BaseComponent
     public bool $groupHeader = false;
     public ?string $color = null;
     public ?string $class = null;
+    public ?string $href = null;
+
+    public function getTag()
+    {
+        return $this->href !== null ? 'a' : 'div';
+    }
 
     public function getClasses()
     {
