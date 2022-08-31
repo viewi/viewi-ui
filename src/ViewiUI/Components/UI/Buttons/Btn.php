@@ -76,8 +76,8 @@ class Btn extends BaseComponent
         $classes .= $this->rounded ? ' rounded' : '';
         $classes .= $this->pill || $this->icon ? ' pill round' : '';
         $classes .= $this->size ? ' size-' . $this->size : ' size-default';
-        $classes .= $this->absolute ? ' viewi-button-absolute' : '';
-        $classes .= $this->fixed ? ' viewi-button-fixed' : '';
+        $classes .= $this->absolute ? ' button-absolute' : '';
+        $classes .= $this->fixed ? ' button-fixed' : '';
         $classes .= $this->right ? ' pos-right' : '';
         $classes .= $this->left ? ' pos-left' : '';
         $classes .= $this->top ? ' pos-top' : '';
