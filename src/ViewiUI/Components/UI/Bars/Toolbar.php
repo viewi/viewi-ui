@@ -3,6 +3,8 @@
 namespace ViewiUI\Components\UI\Bars;
 
 use Viewi\BaseComponent;
+use Viewi\Components\Services\DomHelper;
+use Viewi\DOM\Events\DOMEvent;
 
 class Toolbar extends BaseComponent
 {
@@ -33,6 +35,7 @@ class Toolbar extends BaseComponent
     public bool $floating = false;
     public bool $prominent = false;
     public ?string $color = null;
+    public ?string $contentClass = null;
 
     private function roundedClasses()
     {
@@ -72,6 +75,12 @@ class Toolbar extends BaseComponent
             . ($this->floating ? ' toolbar-floating' : '')
             . ($this->prominent ? ' toolbar-prominent' : '')
             . ($this->color != null ? ' ' . $this->color : '');
+    }
+
+    function getContentClasses()
+    {
+        return 'toolbar-content'
+            . ($this->contentClass !== null ? ' ' . $this->contentClass : '');
     }
 
     public function getWrapperHeight()
