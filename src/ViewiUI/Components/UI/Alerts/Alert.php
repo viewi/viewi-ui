@@ -64,7 +64,7 @@ class Alert extends BaseComponent
     function getIconClasses(): ?string
     {
         return 'alert-icon' . ($this->coloredBorder && $this->type ? ' ' . $this->type . '-text' : '')
-            . ($this->outlined || $this->text || $this->coloredBorder ? ' theme-light' . $this->type . '-text' : ' theme-dark');
+            . ($this->outlined || $this->text || $this->coloredBorder ? ' theme-light ' . $this->type . '-text' : ' theme-dark');
     }
 
     function hasBorder(): bool
