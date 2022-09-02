@@ -8,6 +8,7 @@ use Viewi\BaseComponent;
 class ListContainer extends BaseComponent
 {
     public bool $dense = false;
+    public bool $nav = false;
     public bool $disabled = false;
     public bool $flat = false;
     public bool $rounded = false;
