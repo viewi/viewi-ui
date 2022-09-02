@@ -7,4 +7,5 @@ use Viewi\BaseComponent;
 class Divider extends BaseComponent
 {
     public ?string $class = null;
+    public bool $inset = false;
 }
