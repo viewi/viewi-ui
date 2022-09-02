@@ -1,0 +1,230 @@
+.text-__bp__left {
+    text-align: left !important
+}
+
+.text-__bp__right {
+    text-align: right !important
+}
+
+.text-__bp__center {
+    text-align: center !important
+}
+
+.text-__bp__justify {
+    text-align: justify !important
+}
+
+.text-__bp__start {
+    text-align: start !important
+}
+
+.text-__bp__end {
+    text-align: end !important
+}
+
+.text-__bp__decoration-line-through {
+    text-decoration: line-through !important
+}
+
+.text-__bp__decoration-none {
+    text-decoration: none !important
+}
+
+.text-__bp__decoration-overline {
+    text-decoration: overline !important
+}
+
+.text-__bp__decoration-underline {
+    text-decoration: underline !important
+}
+
+.text-__bp__wrap {
+    white-space: normal !important
+}
+
+.text-__bp__no-wrap {
+    white-space: nowrap !important
+}
+
+.text-__bp__pre {
+    white-space: pre !important
+}
+
+.text-__bp__pre-line {
+    white-space: pre-line !important
+}
+
+.text-__bp__pre-wrap {
+    white-space: pre-wrap !important
+}
+
+.text-__bp__break {
+    overflow-wrap: break-word !important;
+    word-break: break-word !important
+}
+
+.text-__bp__truncate {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important
+}
+
+.text-__bp__none {
+    text-transform: none !important
+}
+
+.text-__bp__capitalize {
+    text-transform: capitalize !important
+}
+
+.text-__bp__lowercase {
+    text-transform: lowercase !important
+}
+
+.text-__bp__uppercase {
+    text-transform: uppercase !important
+}
+
+.text-__bp__h1 {
+    font-size: 6rem !important;
+    line-height: 6rem;
+    letter-spacing: -.015625em !important
+}
+
+.text-h1,
+.text-__bp__h2 {
+    font-weight: 300;
+    font-family: Roboto, sans-serif !important
+}
+
+.text-__bp__h2 {
+    font-size: 3.75rem !important;
+    line-height: 3.75rem;
+    letter-spacing: -.0083333333em !important
+}
+
+.text-__bp__h3 {
+    font-size: 3rem !important;
+    line-height: 3.125rem;
+    letter-spacing: normal !important
+}
+
+.text-h3,
+.text-__bp__h4 {
+    font-weight: 400;
+    font-family: Roboto, sans-serif !important
+}
+
+.text-__bp__h4 {
+    font-size: 2.125rem !important;
+    line-height: 2.5rem;
+    letter-spacing: .0073529412em !important
+}
+
+.text-__bp__h5 {
+    font-size: 1.5rem !important;
+    font-weight: 400;
+    letter-spacing: normal !important
+}
+
+.text-h5,
+.text-__bp__h6 {
+    line-height: 2rem;
+    font-family: Roboto, sans-serif !important
+}
+
+.text-__bp__h6 {
+    font-size: 1.25rem !important;
+    font-weight: 500;
+    letter-spacing: .0125em !important
+}
+
+.text-__bp__subtitle-1 {
+    font-size: 1rem !important;
+    font-weight: 400;
+    line-height: 1.75rem;
+    letter-spacing: .009375em !important;
+    font-family: Roboto, sans-serif !important
+}
+
+.text-__bp__subtitle-2 {
+    font-size: .875rem !important;
+    font-weight: 500;
+    line-height: 1.375rem;
+    letter-spacing: .0071428571em !important;
+    font-family: Roboto, sans-serif !important
+}
+
+.text-__bp__body-1 {
+    font-size: 1rem !important;
+    font-weight: 400;
+    line-height: 1.5rem;
+    letter-spacing: .03125em !important;
+    font-family: Roboto, sans-serif !important
+}
+
+.text-__bp__body-2 {
+    font-weight: 400;
+    line-height: 1.25rem;
+    letter-spacing: .0178571429em !important
+}
+
+.text-body-2,
+.text-__bp__button {
+    font-size: .875rem !important;
+    font-family: Roboto, sans-serif !important
+}
+
+.text-__bp__button {
+    font-weight: 500;
+    line-height: 2.25rem;
+    letter-spacing: .0892857143em !important;
+    text-transform: uppercase !important
+}
+
+.text-__bp__caption {
+    font-weight: 400;
+    line-height: 1.25rem;
+    letter-spacing: .0333333333em !important
+}
+
+.text-caption,
+.text-__bp__overline {
+    font-size: .75rem !important;
+    font-family: Roboto, sans-serif !important
+}
+
+.text-__bp__overline {
+    font-weight: 500;
+    line-height: 2rem;
+    letter-spacing: .1666666667em !important;
+    text-transform: uppercase !important
+}
+
+.font-__bp__weight-thin {
+    font-weight: 100 !important
+}
+
+.font-__bp__weight-light {
+    font-weight: 300 !important
+}
+
+.font-__bp__weight-regular {
+    font-weight: 400 !important
+}
+
+.font-__bp__weight-medium {
+    font-weight: 500 !important
+}
+
+.font-__bp__weight-bold {
+    font-weight: 700 !important
+}
+
+.font-__bp__weight-black {
+    font-weight: 900 !important
+}
+
+.font-__bp__italic {
+    font-style: italic !important
+}

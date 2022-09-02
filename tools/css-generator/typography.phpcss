@@ -1,0 +1,14 @@
+<?php
+
+$config = include 'cssConfig.php';
+$breakPointKeyword = '__bp__';
+
+$origin = file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . 'typography.css');
+$regular = str_replace($breakPointKeyword, '', $origin);
+echo $regular . PHP_EOL;
+foreach ($config['breakpoints'] as $breakPointName => $minWidth) {
+    $breakPointContent = '@media(min-width: ' . $minWidth . ') {' . PHP_EOL;
+    $breakPointContent .= str_replace($breakPointKeyword, $breakPointName . '-', $origin);
+    $breakPointContent .= PHP_EOL . '}';
+    echo $breakPointContent . PHP_EOL;
+}

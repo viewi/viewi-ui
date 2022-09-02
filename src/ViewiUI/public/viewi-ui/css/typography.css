@@ -1,0 +1,1162 @@
+.text-left {
+    text-align: left !important
+}
+
+.text-right {
+    text-align: right !important
+}
+
+.text-center {
+    text-align: center !important
+}
+
+.text-justify {
+    text-align: justify !important
+}
+
+.text-start {
+    text-align: start !important
+}
+
+.text-end {
+    text-align: end !important
+}
+
+.text-decoration-line-through {
+    text-decoration: line-through !important
+}
+
+.text-decoration-none {
+    text-decoration: none !important
+}
+
+.text-decoration-overline {
+    text-decoration: overline !important
+}
+
+.text-decoration-underline {
+    text-decoration: underline !important
+}
+
+.text-wrap {
+    white-space: normal !important
+}
+
+.text-no-wrap {
+    white-space: nowrap !important
+}
+
+.text-pre {
+    white-space: pre !important
+}
+
+.text-pre-line {
+    white-space: pre-line !important
+}
+
+.text-pre-wrap {
+    white-space: pre-wrap !important
+}
+
+.text-break {
+    overflow-wrap: break-word !important;
+    word-break: break-word !important
+}
+
+.text-truncate {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important
+}
+
+.text-none {
+    text-transform: none !important
+}
+
+.text-capitalize {
+    text-transform: capitalize !important
+}
+
+.text-lowercase {
+    text-transform: lowercase !important
+}
+
+.text-uppercase {
+    text-transform: uppercase !important
+}
+
+.text-h1 {
+    font-size: 6rem !important;
+    line-height: 6rem;
+    letter-spacing: -.015625em !important
+}
+
+.text-h1,
+.text-h2 {
+    font-weight: 300;
+    font-family: Roboto, sans-serif !important
+}
+
+.text-h2 {
+    font-size: 3.75rem !important;
+    line-height: 3.75rem;
+    letter-spacing: -.0083333333em !important
+}
+
+.text-h3 {
+    font-size: 3rem !important;
+    line-height: 3.125rem;
+    letter-spacing: normal !important
+}
+
+.text-h3,
+.text-h4 {
+    font-weight: 400;
+    font-family: Roboto, sans-serif !important
+}
+
+.text-h4 {
+    font-size: 2.125rem !important;
+    line-height: 2.5rem;
+    letter-spacing: .0073529412em !important
+}
+
+.text-h5 {
+    font-size: 1.5rem !important;
+    font-weight: 400;
+    letter-spacing: normal !important
+}
+
+.text-h5,
+.text-h6 {
+    line-height: 2rem;
+    font-family: Roboto, sans-serif !important
+}
+
+.text-h6 {
+    font-size: 1.25rem !important;
+    font-weight: 500;
+    letter-spacing: .0125em !important
+}
+
+.text-subtitle-1 {
+    font-size: 1rem !important;
+    font-weight: 400;
+    line-height: 1.75rem;
+    letter-spacing: .009375em !important;
+    font-family: Roboto, sans-serif !important
+}
+
+.text-subtitle-2 {
+    font-size: .875rem !important;
+    font-weight: 500;
+    line-height: 1.375rem;
+    letter-spacing: .0071428571em !important;
+    font-family: Roboto, sans-serif !important
+}
+
+.text-body-1 {
+    font-size: 1rem !important;
+    font-weight: 400;
+    line-height: 1.5rem;
+    letter-spacing: .03125em !important;
+    font-family: Roboto, sans-serif !important
+}
+
+.text-body-2 {
+    font-weight: 400;
+    line-height: 1.25rem;
+    letter-spacing: .0178571429em !important
+}
+
+.text-body-2,
+.text-button {
+    font-size: .875rem !important;
+    font-family: Roboto, sans-serif !important
+}
+
+.text-button {
+    font-weight: 500;
+    line-height: 2.25rem;
+    letter-spacing: .0892857143em !important;
+    text-transform: uppercase !important
+}
+
+.text-caption {
+    font-weight: 400;
+    line-height: 1.25rem;
+    letter-spacing: .0333333333em !important
+}
+
+.text-caption,
+.text-overline {
+    font-size: .75rem !important;
+    font-family: Roboto, sans-serif !important
+}
+
+.text-overline {
+    font-weight: 500;
+    line-height: 2rem;
+    letter-spacing: .1666666667em !important;
+    text-transform: uppercase !important
+}
+
+.font-weight-thin {
+    font-weight: 100 !important
+}
+
+.font-weight-light {
+    font-weight: 300 !important
+}
+
+.font-weight-regular {
+    font-weight: 400 !important
+}
+
+.font-weight-medium {
+    font-weight: 500 !important
+}
+
+.font-weight-bold {
+    font-weight: 700 !important
+}
+
+.font-weight-black {
+    font-weight: 900 !important
+}
+
+.font-italic {
+    font-style: italic !important
+}
+
+@media(min-width: 600px) {
+    .text-sm-left {
+        text-align: left !important
+    }
+
+    .text-sm-right {
+        text-align: right !important
+    }
+
+    .text-sm-center {
+        text-align: center !important
+    }
+
+    .text-sm-justify {
+        text-align: justify !important
+    }
+
+    .text-sm-start {
+        text-align: start !important
+    }
+
+    .text-sm-end {
+        text-align: end !important
+    }
+
+    .text-sm-decoration-line-through {
+        text-decoration: line-through !important
+    }
+
+    .text-sm-decoration-none {
+        text-decoration: none !important
+    }
+
+    .text-sm-decoration-overline {
+        text-decoration: overline !important
+    }
+
+    .text-sm-decoration-underline {
+        text-decoration: underline !important
+    }
+
+    .text-sm-wrap {
+        white-space: normal !important
+    }
+
+    .text-sm-no-wrap {
+        white-space: nowrap !important
+    }
+
+    .text-sm-pre {
+        white-space: pre !important
+    }
+
+    .text-sm-pre-line {
+        white-space: pre-line !important
+    }
+
+    .text-sm-pre-wrap {
+        white-space: pre-wrap !important
+    }
+
+    .text-sm-break {
+        overflow-wrap: break-word !important;
+        word-break: break-word !important
+    }
+
+    .text-sm-truncate {
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important
+    }
+
+    .text-sm-none {
+        text-transform: none !important
+    }
+
+    .text-sm-capitalize {
+        text-transform: capitalize !important
+    }
+
+    .text-sm-lowercase {
+        text-transform: lowercase !important
+    }
+
+    .text-sm-uppercase {
+        text-transform: uppercase !important
+    }
+
+    .text-sm-h1 {
+        font-size: 6rem !important;
+        line-height: 6rem;
+        letter-spacing: -.015625em !important
+    }
+
+    .text-h1,
+    .text-sm-h2 {
+        font-weight: 300;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-sm-h2 {
+        font-size: 3.75rem !important;
+        line-height: 3.75rem;
+        letter-spacing: -.0083333333em !important
+    }
+
+    .text-sm-h3 {
+        font-size: 3rem !important;
+        line-height: 3.125rem;
+        letter-spacing: normal !important
+    }
+
+    .text-h3,
+    .text-sm-h4 {
+        font-weight: 400;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-sm-h4 {
+        font-size: 2.125rem !important;
+        line-height: 2.5rem;
+        letter-spacing: .0073529412em !important
+    }
+
+    .text-sm-h5 {
+        font-size: 1.5rem !important;
+        font-weight: 400;
+        letter-spacing: normal !important
+    }
+
+    .text-h5,
+    .text-sm-h6 {
+        line-height: 2rem;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-sm-h6 {
+        font-size: 1.25rem !important;
+        font-weight: 500;
+        letter-spacing: .0125em !important
+    }
+
+    .text-sm-subtitle-1 {
+        font-size: 1rem !important;
+        font-weight: 400;
+        line-height: 1.75rem;
+        letter-spacing: .009375em !important;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-sm-subtitle-2 {
+        font-size: .875rem !important;
+        font-weight: 500;
+        line-height: 1.375rem;
+        letter-spacing: .0071428571em !important;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-sm-body-1 {
+        font-size: 1rem !important;
+        font-weight: 400;
+        line-height: 1.5rem;
+        letter-spacing: .03125em !important;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-sm-body-2 {
+        font-weight: 400;
+        line-height: 1.25rem;
+        letter-spacing: .0178571429em !important
+    }
+
+    .text-body-2,
+    .text-sm-button {
+        font-size: .875rem !important;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-sm-button {
+        font-weight: 500;
+        line-height: 2.25rem;
+        letter-spacing: .0892857143em !important;
+        text-transform: uppercase !important
+    }
+
+    .text-sm-caption {
+        font-weight: 400;
+        line-height: 1.25rem;
+        letter-spacing: .0333333333em !important
+    }
+
+    .text-caption,
+    .text-sm-overline {
+        font-size: .75rem !important;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-sm-overline {
+        font-weight: 500;
+        line-height: 2rem;
+        letter-spacing: .1666666667em !important;
+        text-transform: uppercase !important
+    }
+
+    .font-sm-weight-thin {
+        font-weight: 100 !important
+    }
+
+    .font-sm-weight-light {
+        font-weight: 300 !important
+    }
+
+    .font-sm-weight-regular {
+        font-weight: 400 !important
+    }
+
+    .font-sm-weight-medium {
+        font-weight: 500 !important
+    }
+
+    .font-sm-weight-bold {
+        font-weight: 700 !important
+    }
+
+    .font-sm-weight-black {
+        font-weight: 900 !important
+    }
+
+    .font-sm-italic {
+        font-style: italic !important
+    }
+}
+
+@media(min-width: 960px) {
+    .text-md-left {
+        text-align: left !important
+    }
+
+    .text-md-right {
+        text-align: right !important
+    }
+
+    .text-md-center {
+        text-align: center !important
+    }
+
+    .text-md-justify {
+        text-align: justify !important
+    }
+
+    .text-md-start {
+        text-align: start !important
+    }
+
+    .text-md-end {
+        text-align: end !important
+    }
+
+    .text-md-decoration-line-through {
+        text-decoration: line-through !important
+    }
+
+    .text-md-decoration-none {
+        text-decoration: none !important
+    }
+
+    .text-md-decoration-overline {
+        text-decoration: overline !important
+    }
+
+    .text-md-decoration-underline {
+        text-decoration: underline !important
+    }
+
+    .text-md-wrap {
+        white-space: normal !important
+    }
+
+    .text-md-no-wrap {
+        white-space: nowrap !important
+    }
+
+    .text-md-pre {
+        white-space: pre !important
+    }
+
+    .text-md-pre-line {
+        white-space: pre-line !important
+    }
+
+    .text-md-pre-wrap {
+        white-space: pre-wrap !important
+    }
+
+    .text-md-break {
+        overflow-wrap: break-word !important;
+        word-break: break-word !important
+    }
+
+    .text-md-truncate {
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important
+    }
+
+    .text-md-none {
+        text-transform: none !important
+    }
+
+    .text-md-capitalize {
+        text-transform: capitalize !important
+    }
+
+    .text-md-lowercase {
+        text-transform: lowercase !important
+    }
+
+    .text-md-uppercase {
+        text-transform: uppercase !important
+    }
+
+    .text-md-h1 {
+        font-size: 6rem !important;
+        line-height: 6rem;
+        letter-spacing: -.015625em !important
+    }
+
+    .text-h1,
+    .text-md-h2 {
+        font-weight: 300;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-md-h2 {
+        font-size: 3.75rem !important;
+        line-height: 3.75rem;
+        letter-spacing: -.0083333333em !important
+    }
+
+    .text-md-h3 {
+        font-size: 3rem !important;
+        line-height: 3.125rem;
+        letter-spacing: normal !important
+    }
+
+    .text-h3,
+    .text-md-h4 {
+        font-weight: 400;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-md-h4 {
+        font-size: 2.125rem !important;
+        line-height: 2.5rem;
+        letter-spacing: .0073529412em !important
+    }
+
+    .text-md-h5 {
+        font-size: 1.5rem !important;
+        font-weight: 400;
+        letter-spacing: normal !important
+    }
+
+    .text-h5,
+    .text-md-h6 {
+        line-height: 2rem;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-md-h6 {
+        font-size: 1.25rem !important;
+        font-weight: 500;
+        letter-spacing: .0125em !important
+    }
+
+    .text-md-subtitle-1 {
+        font-size: 1rem !important;
+        font-weight: 400;
+        line-height: 1.75rem;
+        letter-spacing: .009375em !important;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-md-subtitle-2 {
+        font-size: .875rem !important;
+        font-weight: 500;
+        line-height: 1.375rem;
+        letter-spacing: .0071428571em !important;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-md-body-1 {
+        font-size: 1rem !important;
+        font-weight: 400;
+        line-height: 1.5rem;
+        letter-spacing: .03125em !important;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-md-body-2 {
+        font-weight: 400;
+        line-height: 1.25rem;
+        letter-spacing: .0178571429em !important
+    }
+
+    .text-body-2,
+    .text-md-button {
+        font-size: .875rem !important;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-md-button {
+        font-weight: 500;
+        line-height: 2.25rem;
+        letter-spacing: .0892857143em !important;
+        text-transform: uppercase !important
+    }
+
+    .text-md-caption {
+        font-weight: 400;
+        line-height: 1.25rem;
+        letter-spacing: .0333333333em !important
+    }
+
+    .text-caption,
+    .text-md-overline {
+        font-size: .75rem !important;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-md-overline {
+        font-weight: 500;
+        line-height: 2rem;
+        letter-spacing: .1666666667em !important;
+        text-transform: uppercase !important
+    }
+
+    .font-md-weight-thin {
+        font-weight: 100 !important
+    }
+
+    .font-md-weight-light {
+        font-weight: 300 !important
+    }
+
+    .font-md-weight-regular {
+        font-weight: 400 !important
+    }
+
+    .font-md-weight-medium {
+        font-weight: 500 !important
+    }
+
+    .font-md-weight-bold {
+        font-weight: 700 !important
+    }
+
+    .font-md-weight-black {
+        font-weight: 900 !important
+    }
+
+    .font-md-italic {
+        font-style: italic !important
+    }
+}
+
+@media(min-width: 1264px) {
+    .text-lg-left {
+        text-align: left !important
+    }
+
+    .text-lg-right {
+        text-align: right !important
+    }
+
+    .text-lg-center {
+        text-align: center !important
+    }
+
+    .text-lg-justify {
+        text-align: justify !important
+    }
+
+    .text-lg-start {
+        text-align: start !important
+    }
+
+    .text-lg-end {
+        text-align: end !important
+    }
+
+    .text-lg-decoration-line-through {
+        text-decoration: line-through !important
+    }
+
+    .text-lg-decoration-none {
+        text-decoration: none !important
+    }
+
+    .text-lg-decoration-overline {
+        text-decoration: overline !important
+    }
+
+    .text-lg-decoration-underline {
+        text-decoration: underline !important
+    }
+
+    .text-lg-wrap {
+        white-space: normal !important
+    }
+
+    .text-lg-no-wrap {
+        white-space: nowrap !important
+    }
+
+    .text-lg-pre {
+        white-space: pre !important
+    }
+
+    .text-lg-pre-line {
+        white-space: pre-line !important
+    }
+
+    .text-lg-pre-wrap {
+        white-space: pre-wrap !important
+    }
+
+    .text-lg-break {
+        overflow-wrap: break-word !important;
+        word-break: break-word !important
+    }
+
+    .text-lg-truncate {
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important
+    }
+
+    .text-lg-none {
+        text-transform: none !important
+    }
+
+    .text-lg-capitalize {
+        text-transform: capitalize !important
+    }
+
+    .text-lg-lowercase {
+        text-transform: lowercase !important
+    }
+
+    .text-lg-uppercase {
+        text-transform: uppercase !important
+    }
+
+    .text-lg-h1 {
+        font-size: 6rem !important;
+        line-height: 6rem;
+        letter-spacing: -.015625em !important
+    }
+
+    .text-h1,
+    .text-lg-h2 {
+        font-weight: 300;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-lg-h2 {
+        font-size: 3.75rem !important;
+        line-height: 3.75rem;
+        letter-spacing: -.0083333333em !important
+    }
+
+    .text-lg-h3 {
+        font-size: 3rem !important;
+        line-height: 3.125rem;
+        letter-spacing: normal !important
+    }
+
+    .text-h3,
+    .text-lg-h4 {
+        font-weight: 400;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-lg-h4 {
+        font-size: 2.125rem !important;
+        line-height: 2.5rem;
+        letter-spacing: .0073529412em !important
+    }
+
+    .text-lg-h5 {
+        font-size: 1.5rem !important;
+        font-weight: 400;
+        letter-spacing: normal !important
+    }
+
+    .text-h5,
+    .text-lg-h6 {
+        line-height: 2rem;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-lg-h6 {
+        font-size: 1.25rem !important;
+        font-weight: 500;
+        letter-spacing: .0125em !important
+    }
+
+    .text-lg-subtitle-1 {
+        font-size: 1rem !important;
+        font-weight: 400;
+        line-height: 1.75rem;
+        letter-spacing: .009375em !important;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-lg-subtitle-2 {
+        font-size: .875rem !important;
+        font-weight: 500;
+        line-height: 1.375rem;
+        letter-spacing: .0071428571em !important;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-lg-body-1 {
+        font-size: 1rem !important;
+        font-weight: 400;
+        line-height: 1.5rem;
+        letter-spacing: .03125em !important;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-lg-body-2 {
+        font-weight: 400;
+        line-height: 1.25rem;
+        letter-spacing: .0178571429em !important
+    }
+
+    .text-body-2,
+    .text-lg-button {
+        font-size: .875rem !important;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-lg-button {
+        font-weight: 500;
+        line-height: 2.25rem;
+        letter-spacing: .0892857143em !important;
+        text-transform: uppercase !important
+    }
+
+    .text-lg-caption {
+        font-weight: 400;
+        line-height: 1.25rem;
+        letter-spacing: .0333333333em !important
+    }
+
+    .text-caption,
+    .text-lg-overline {
+        font-size: .75rem !important;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-lg-overline {
+        font-weight: 500;
+        line-height: 2rem;
+        letter-spacing: .1666666667em !important;
+        text-transform: uppercase !important
+    }
+
+    .font-lg-weight-thin {
+        font-weight: 100 !important
+    }
+
+    .font-lg-weight-light {
+        font-weight: 300 !important
+    }
+
+    .font-lg-weight-regular {
+        font-weight: 400 !important
+    }
+
+    .font-lg-weight-medium {
+        font-weight: 500 !important
+    }
+
+    .font-lg-weight-bold {
+        font-weight: 700 !important
+    }
+
+    .font-lg-weight-black {
+        font-weight: 900 !important
+    }
+
+    .font-lg-italic {
+        font-style: italic !important
+    }
+}
+
+@media(min-width: 1904px) {
+    .text-xl-left {
+        text-align: left !important
+    }
+
+    .text-xl-right {
+        text-align: right !important
+    }
+
+    .text-xl-center {
+        text-align: center !important
+    }
+
+    .text-xl-justify {
+        text-align: justify !important
+    }
+
+    .text-xl-start {
+        text-align: start !important
+    }
+
+    .text-xl-end {
+        text-align: end !important
+    }
+
+    .text-xl-decoration-line-through {
+        text-decoration: line-through !important
+    }
+
+    .text-xl-decoration-none {
+        text-decoration: none !important
+    }
+
+    .text-xl-decoration-overline {
+        text-decoration: overline !important
+    }
+
+    .text-xl-decoration-underline {
+        text-decoration: underline !important
+    }
+
+    .text-xl-wrap {
+        white-space: normal !important
+    }
+
+    .text-xl-no-wrap {
+        white-space: nowrap !important
+    }
+
+    .text-xl-pre {
+        white-space: pre !important
+    }
+
+    .text-xl-pre-line {
+        white-space: pre-line !important
+    }
+
+    .text-xl-pre-wrap {
+        white-space: pre-wrap !important
+    }
+
+    .text-xl-break {
+        overflow-wrap: break-word !important;
+        word-break: break-word !important
+    }
+
+    .text-xl-truncate {
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important
+    }
+
+    .text-xl-none {
+        text-transform: none !important
+    }
+
+    .text-xl-capitalize {
+        text-transform: capitalize !important
+    }
+
+    .text-xl-lowercase {
+        text-transform: lowercase !important
+    }
+
+    .text-xl-uppercase {
+        text-transform: uppercase !important
+    }
+
+    .text-xl-h1 {
+        font-size: 6rem !important;
+        line-height: 6rem;
+        letter-spacing: -.015625em !important
+    }
+
+    .text-h1,
+    .text-xl-h2 {
+        font-weight: 300;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-xl-h2 {
+        font-size: 3.75rem !important;
+        line-height: 3.75rem;
+        letter-spacing: -.0083333333em !important
+    }
+
+    .text-xl-h3 {
+        font-size: 3rem !important;
+        line-height: 3.125rem;
+        letter-spacing: normal !important
+    }
+
+    .text-h3,
+    .text-xl-h4 {
+        font-weight: 400;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-xl-h4 {
+        font-size: 2.125rem !important;
+        line-height: 2.5rem;
+        letter-spacing: .0073529412em !important
+    }
+
+    .text-xl-h5 {
+        font-size: 1.5rem !important;
+        font-weight: 400;
+        letter-spacing: normal !important
+    }
+
+    .text-h5,
+    .text-xl-h6 {
+        line-height: 2rem;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-xl-h6 {
+        font-size: 1.25rem !important;
+        font-weight: 500;
+        letter-spacing: .0125em !important
+    }
+
+    .text-xl-subtitle-1 {
+        font-size: 1rem !important;
+        font-weight: 400;
+        line-height: 1.75rem;
+        letter-spacing: .009375em !important;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-xl-subtitle-2 {
+        font-size: .875rem !important;
+        font-weight: 500;
+        line-height: 1.375rem;
+        letter-spacing: .0071428571em !important;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-xl-body-1 {
+        font-size: 1rem !important;
+        font-weight: 400;
+        line-height: 1.5rem;
+        letter-spacing: .03125em !important;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-xl-body-2 {
+        font-weight: 400;
+        line-height: 1.25rem;
+        letter-spacing: .0178571429em !important
+    }
+
+    .text-body-2,
+    .text-xl-button {
+        font-size: .875rem !important;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-xl-button {
+        font-weight: 500;
+        line-height: 2.25rem;
+        letter-spacing: .0892857143em !important;
+        text-transform: uppercase !important
+    }
+
+    .text-xl-caption {
+        font-weight: 400;
+        line-height: 1.25rem;
+        letter-spacing: .0333333333em !important
+    }
+
+    .text-caption,
+    .text-xl-overline {
+        font-size: .75rem !important;
+        font-family: Roboto, sans-serif !important
+    }
+
+    .text-xl-overline {
+        font-weight: 500;
+        line-height: 2rem;
+        letter-spacing: .1666666667em !important;
+        text-transform: uppercase !important
+    }
+
+    .font-xl-weight-thin {
+        font-weight: 100 !important
+    }
+
+    .font-xl-weight-light {
+        font-weight: 300 !important
+    }
+
+    .font-xl-weight-regular {
+        font-weight: 400 !important
+    }
+
+    .font-xl-weight-medium {
+        font-weight: 500 !important
+    }
+
+    .font-xl-weight-bold {
+        font-weight: 700 !important
+    }
+
+    .font-xl-weight-black {
+        font-weight: 900 !important
+    }
+
+    .font-xl-italic {
+        font-style: italic !important
+    }
+}
