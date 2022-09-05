@@ -26,6 +26,9 @@ class NavigationDrawer extends BaseComponent
     public bool $dark = false;
     public bool $hideOverlay = false;
     public bool $modelValue = false;
+    public ?string $class = null;
+    public ?int $positionBottom = null;
+    public ?int $positionTop = null;
 
     function __rendered()
     {
@@ -104,15 +107,20 @@ class NavigationDrawer extends BaseComponent
             . ($this->expandOnHover ? ' navigation-drawer-open-on-hover' : '') // this.expandOnHover,
             . ($this->right ? ' navigation-drawer-right' : '') // this.right,
             . ($this->temporary ? ' navigation-drawer-temporary' : '') // this.temporary,
-            . ($this->dark ? ' theme-dark' : ' theme-light');
+            . ($this->dark ? ' theme-dark' : ' theme-light')
+            . ($this->class !== null ? ' ' . $this->class : '');
     }
 
     public function getStyles()
     {
         $style = [];
-        $style['height'] = '100%';
+        if ($this->positionBottom !== null) {
+            $style['bottom'] = $this->positionBottom . 'px';
+        } else {
+            $style['height'] = '100%';
+        }
         $style['width'] = $this->isMiniVariant() ? "{$this->miniVariantWidth}px" : "{$this->width}px";
-        $style['top'] = '0px';
+        $style['top'] = $this->positionTop ? $this->positionTop . 'px' : '0px';
         $transform = ($this->isActive() ? 0 : ($this->bottom ? 100 : ($this->right ? 100 : -100)));
         $style['transform'] = "translateX($transform%)";
 
