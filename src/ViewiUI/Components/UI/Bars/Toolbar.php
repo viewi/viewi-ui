@@ -87,17 +87,17 @@ class Toolbar extends BaseComponent
     {
         if ($this->prominent) {
             if ($this->dense) {
-                return "height: 96px;";
+                return "height: 96px; max-height: 96px;";
             }
-            return "height: 128px;";
+            return "height: 128px; max-height: 128px;";
         }
         if ($this->extended) {
-            return "height: 128px;";
+            return "height: 128px; max-height: 128px;";
         }
         if ($this->dense) {
-            return "height: 48px;";
+            return "height: 48px; max-height: 48px;";
         }
-        return "height: 64px;";
+        return "height: 64px; max-height: 64px;";
     }
 
     public function getContentHeight()
