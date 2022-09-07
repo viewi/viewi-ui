@@ -13,6 +13,8 @@ class ListItem extends BaseComponent
     public ?string $color = null;
     public ?string $class = null;
     public ?string $href = null;
+    public ?string $target = null;
+    public ?string $rel = null;
 
     public function getTag()
     {
