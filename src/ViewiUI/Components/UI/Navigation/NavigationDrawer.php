@@ -3,6 +3,7 @@
 namespace ViewiUI\Components\UI\Navigation;
 
 use Viewi\BaseComponent;
+use Viewi\Components\Services\ClientTimer;
 use Viewi\Components\Services\DomHelper;
 use Viewi\DOM\Events\DOMEvent;
 
@@ -21,6 +22,7 @@ class NavigationDrawer extends BaseComponent
     public $miniVariantWidth = 56;
     public bool $expandOnHover = false;
     public bool $permanent = false;
+    public bool $permanentMobile = false;
     public bool $right = false;
     public bool $temporary = false;
     public bool $dark = false;
@@ -106,7 +108,8 @@ class NavigationDrawer extends BaseComponent
             . ($this->isActive() ? ' navigation-drawer-open' : '') // this.isActive,
             . ($this->expandOnHover ? ' navigation-drawer-open-on-hover' : '') // this.expandOnHover,
             . ($this->right ? ' navigation-drawer-right' : '') // this.right,
-            . ($this->temporary ? ' navigation-drawer-temporary' : '') // this.temporary,
+            . ($this->temporary && (!$this->permanentMobile || $this->modelValue) ? ' navigation-drawer-temporary' : '') // this.temporary,
+            . ($this->permanentMobile ? ' navigation-permanent-mobile' : '') // this.permanentMobile,
             . ($this->dark ? ' theme-dark' : ' theme-light')
             . ($this->class !== null ? ' ' . $this->class : '');
     }
@@ -134,8 +137,10 @@ class NavigationDrawer extends BaseComponent
     function onOutsideClicked()
     {
         if ($this->modelValue) {
-            $this->modelValue = false;
-            $this->emitEvent('model', $this->modelValue);
+            ClientTimer::setTimeoutStatic(function () {
+                $this->modelValue = false;
+                $this->emitEvent('model', $this->modelValue);
+            }, 1);
         }
     }
 
