@@ -9,7 +9,7 @@ class Resizable extends BaseComponent
 
     function __rendered()
     {
-        $this->isMobile = $this->_element->clientWidth <= $this->resizeThreshold;
+        $this->isMobile = $this->_element->clientWidth <= $this->mobileBreakpoint;
         $this->emitEvent('mobile-change', $this->isMobile);
         // resize event
         $document = DomHelper::getWindow();
@@ -31,7 +31,7 @@ class Resizable extends BaseComponent
     function onResize(DOMEvent $event)
     {
         $before = $this->isMobile;
-        if ($this->_element->clientWidth > $this->resizeThreshold) {
+        if ($this->_element->clientWidth > $this->mobileBreakpoint) {
             // desktop/tablet screen
             $this->isMobile = false;
         } else {
