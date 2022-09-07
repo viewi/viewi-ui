@@ -258,7 +258,7 @@
 }
 
 .viewi-button.rounded {
-    border-radius: 28px
+    border-radius: 28px !important;
 }
 
 .viewi-button.pill,
