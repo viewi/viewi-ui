@@ -20,6 +20,7 @@ class Sheet extends BaseComponent
      */
     public $rounded = false;
     public bool $tile = false;
+    public ?string $class = null;
 
     private function roundedClasses()
     {
@@ -45,7 +46,7 @@ class Sheet extends BaseComponent
             . ($this->elevation !== null ? ' sheet-elevated elevation-' . $this->elevation : '')
             . $this->roundedClasses()
             . ' theme-light'
-            . (isset($this->_props['class']) ? ' ' . $this->_props['class'] : '');
+            . ($this->class !== null ? ' ' . $this->class : '');
         // themes
     }
 }
