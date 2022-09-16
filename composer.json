@@ -2,7 +2,7 @@
     "name": "viewi/viewi-ui",
     "description": "UI components for Viewi",
     "require": {
-        "viewi/viewi": "^0.5.0"
+        "viewi/viewi": "~0.5"
     },
     "keywords": [
         "viewi",
