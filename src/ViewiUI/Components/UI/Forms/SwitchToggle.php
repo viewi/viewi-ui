@@ -10,6 +10,7 @@ class SwitchToggle extends BaseComponent
 {
     public ?string $value = null;
     public $modelValue = null;
+    public bool $checked = false;
     public ?string $uid = null;
     public ?string $id = null;
     public string $label = '';
@@ -40,6 +41,10 @@ class SwitchToggle extends BaseComponent
         $this->booted = true;
         $this->uid = $this->__id;
         $this->hasValue = !!$this->value;
+        if($this->checked)
+        {
+            $this->modelValue = true;
+        }
     }
 
     function getId(): string
@@ -142,6 +147,7 @@ class SwitchToggle extends BaseComponent
 
     function onChange(DOMEvent $event)
     {
+        $this->checked = $event->target->checked;
         $this->emitEvent('change', $event);
         $this->postValidate();
     }
