@@ -42,6 +42,7 @@ class Btn extends BaseComponent
     public bool $icon = false;
     public ?string $href = null;
     public ?string $target = null;
+    public ?string $rel = null;
     public ?string $type = 'button';
     /**
      * @options [true, false]
