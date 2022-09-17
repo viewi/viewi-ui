@@ -14,6 +14,7 @@ class Row extends BaseComponent
     public ?string $alignContent = null;
     public ?string $justify = null;
     public ?string $style = null;
+    public ?string $class = null;
 
     // screen breakpoints
     // align-xl|lg|md|sm
@@ -37,6 +38,7 @@ class Row extends BaseComponent
             . ($this->dense ? ' dense' : '')
             . ($this->alignContent ? ' align-content-' . $this->alignContent : '')
             . ($this->justify ? ' justify-' . $this->justify : '')
-            . $breakpointClasses;
+            . $breakpointClasses
+            . ($this->class !== null ? ' ' . $this->class : '');
     }
 }
