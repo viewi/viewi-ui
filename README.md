@@ -1,39 +1,15 @@
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-direct-single.svg)](https://stand-with-ukraine.pp.ua)
 
-<p align="center"><a href="https://github.com/viewi/viewi-ui#logo"><img src="https://ui.viewi.net/logo.svg" alt="Viewi UI" height="180"/></a></p>
+<p align="center"><a href="https://ui.viewi.net/"><img src="https://ui.viewi.net/logo.svg" alt="Viewi UI" height="180"/></a></p>
 
 # Viewi UI
 
 Library with Material Components for Viewi. Inspired by Vuetify and Bootstrap.
 
-Usage
+Docs
 --------
+[ui.viewi.net](https://ui.viewi.net)
 
-Include `ViewiUI` package:
-
-```php
-use Viewi\App;
-
-$config = require 'config.php';
-$publicConfig = require 'publicConfig.php';
-include __DIR__ . '/routes.php';
-App::init($config, $publicConfig);
-App::use(ViewiUI\Package::class); // here
-```
-
-Add `<ViewiUI />` somewhere in your layout:
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>
-        $title | Viewi UI
-    </title>
-...
-    <ViewiUI />
-...
-```
 
 Support
 --------
