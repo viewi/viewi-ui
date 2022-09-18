@@ -1,5 +1,10 @@
-# viewi-ui
-Viewi UI - Library with Material Components for Viewi. Inspired by Vuetify and Bootstrap.
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-direct-single.svg)](https://stand-with-ukraine.pp.ua)
+
+<p align="center"><a href="https://github.com/viewi/viewi-ui#logo"><img src="https://ui.viewi.net/logo.svg" alt="Viewi UI" height="180"/></a></p>
+
+# Viewi UI
+
+Library with Material Components for Viewi. Inspired by Vuetify and Bootstrap.
 
 Usage
 --------
