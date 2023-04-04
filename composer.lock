@@ -4,26 +4,29 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "76a1a24ae45208b3f640921d7222d290",
+    "content-hash": "7d1a17dc1a36c36be4349c417d7874e1",
     "packages": [
         {
             "name": "viewi/viewi",
-            "version": "dev-master",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/viewi/viewi.git",
-                "reference": "f78428f9fcda5b5a18893d1e2aaa156f03539773"
+                "reference": "6e14d096d83c62925df7dff61ed08a60d1577cdd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/viewi/viewi/zipball/f78428f9fcda5b5a18893d1e2aaa156f03539773",
-                "reference": "f78428f9fcda5b5a18893d1e2aaa156f03539773",
+                "url": "https://api.github.com/repos/viewi/viewi/zipball/6e14d096d83c62925df7dff61ed08a60d1577cdd",
+                "reference": "6e14d096d83c62925df7dff61ed08a60d1577cdd",
                 "shasum": ""
             },
             "require": {
+                "ext-ctype": "*",
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-zlib": "*",
                 "php": "^7.4 || ^8.0"
             },
-            "default-branch": true,
             "bin": [
                 "bin/viewi"
             ],
@@ -37,6 +40,12 @@
             "license": [
                 "MIT"
             ],
+            "authors": [
+                {
+                    "name": "Ivan Voitovych",
+                    "email": "col606v@gmail.com"
+                }
+            ],
             "description": "Powerful tool for building progressive and completely reactive web applications",
             "keywords": [
                 "reactive",
@@ -46,20 +55,24 @@
             ],
             "support": {
                 "issues": "https://github.com/viewi/viewi/issues",
-                "source": "https://github.com/viewi/viewi/tree/master"
+                "source": "https://github.com/viewi/viewi/tree/v1.0.1"
             },
-            "time": "2022-05-14T08:38:33+00:00"
+            "funding": [
+                {
+                    "url": "https://www.buymeacoffee.com/ivan.v",
+                    "type": "custom"
+                }
+            ],
+            "time": "2023-04-02T14:16:06+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "viewi/viewi": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
