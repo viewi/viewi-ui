@@ -238,6 +238,7 @@ class TextField extends BaseComponent
     function onClearClick($event)
     {
         $this->_refs['input']->focus();
+        $this->emitEvent('model', null);
         $this->value = null;
         $this->hasValue = false;
         $this->postValidate();
