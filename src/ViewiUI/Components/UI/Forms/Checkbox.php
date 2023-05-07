@@ -10,6 +10,9 @@ class Checkbox extends BaseComponent
 {
     public ?string $value = null;
     public $modelValue = null;
+     /**
+     * @options [true, false]
+     */
     public bool $checked = false;
     public ?string $uid = null;
     public ?string $id = null;
