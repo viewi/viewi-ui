@@ -79,6 +79,7 @@ class TextField extends BaseComponent
 
     function __rendered()
     {
+        $this->hasValue = !!$this->value;
         if ($this->autoGrow) {
             $this->calculateInputHeight();
         }
