@@ -26,16 +26,16 @@
                     class.error-text="$hasValidationMessages">$label</label>
                 <div if="$prefix" class="text-field-prefix">$prefix</div>
                 <textarea if="$textarea" #input id="{getId()}" placeholder="{$isFocused ? $placeholder : null}"
-                    disabled="$disabled" readonly="$readonly" (focus)="onFocus($event)" (blur)="onBlur($event)"
+                    disabled="$disabled" readonly="$readonly" required="$required" (focus)="onFocus($event)" (blur)="onBlur($event)"
                     (input)="onInput($event)" (keydown)="onKeyDown($event)" model="$value" rows="$rows"
                     autocomplete="$autocomplete"></textarea>
                 <select else-if="$select" #input id="{getId()}" placeholder="{$isFocused ? $placeholder : null}"
-                    disabled="$disabled" readonly="$readonly" (focus)="onFocus($event)" (blur)="onBlur($event)"
+                    disabled="$disabled" readonly="$readonly" required="$required" (focus)="onFocus($event)" (blur)="onBlur($event)"
                     (input)="onInput($event)" (keydown)="onKeyDown($event)" model="$value" value="$value">
                     <option foreach="$items as $item">$item</option>
                 </select>
                 <input else #input id="{getId()}" type="$type" placeholder="{$isFocused ? $placeholder : null}"
-                    disabled="$disabled" readonly="$readonly" (focus)="onFocus($event)" (blur)="onBlur($event)"
+                    disabled="$disabled" readonly="$readonly" required="$required" (focus)="onFocus($event)" (blur)="onBlur($event)"
                     (input)="onInput($event)" (keydown)="onKeyDown($event)" model="$value" value="$value"
                     autocomplete="$autocomplete" />
                 <div if="$suffix" class="text-field-suffix">$suffix</div>

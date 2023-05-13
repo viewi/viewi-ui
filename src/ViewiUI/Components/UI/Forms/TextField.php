@@ -25,6 +25,7 @@ class TextField extends BaseComponent
     public bool $shaped = false;
     public bool $disabled = false;
     public bool $readonly = false;
+    public bool $required = false;
     /**
      * 
      * @var bool|'auto'
